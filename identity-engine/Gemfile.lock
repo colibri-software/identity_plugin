@@ -9,6 +9,11 @@ PATH
   remote: .
   specs:
     identity-engine (0.0.1)
+      bcrypt-ruby
+      bson_ext
+      flash-dance
+      mongoid
+      omniauth-identity
       rails (~> 3.2.11)
 
 GEM
