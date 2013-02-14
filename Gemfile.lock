@@ -52,7 +52,19 @@ GEM
     bson_ext (1.8.2)
       bson (~> 1.8.2)
     builder (3.0.4)
+    capybara (2.0.2)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (~> 2.0)
+      xpath (~> 1.0.0)
+    childprocess (0.3.7)
+      ffi (~> 1.0, >= 1.0.6)
+    database_cleaner (0.9.1)
+    diff-lcs (1.1.3)
     erubis (2.7.0)
+    ffi (1.3.1)
     hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.1)
@@ -73,6 +85,7 @@ GEM
       tzinfo (~> 0.3.22)
     moped (1.4.0)
     multi_json (1.5.0)
+    nokogiri (1.5.6)
     omniauth (1.1.2)
       hashie (~> 1.2)
       rack
@@ -106,6 +119,23 @@ GEM
     rake (10.0.3)
     rdoc (3.12.1)
       json (~> 1.4)
+    rspec-core (2.12.2)
+    rspec-expectations (2.12.1)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.12.2)
+    rspec-rails (2.12.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 2.12.0)
+      rspec-expectations (~> 2.12.0)
+      rspec-mocks (~> 2.12.0)
+    rubyzip (0.9.9)
+    selenium-webdriver (2.29.0)
+      childprocess (>= 0.2.5)
+      multi_json (~> 1.0)
+      rubyzip
+      websocket (~> 1.0.4)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -117,6 +147,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.35)
+    websocket (1.0.7)
+    xpath (1.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -124,8 +157,11 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   bson_ext
+  capybara
+  database_cleaner
   flash-dance!
   identity-engine!
   jquery-rails
   mongoid
   omniauth-identity
+  rspec-rails

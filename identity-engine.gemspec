@@ -22,4 +22,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'flash-dance'
   s.add_dependency 'mongoid'
   s.add_dependency 'omniauth-identity'
+  
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'database_cleaner'
 end
