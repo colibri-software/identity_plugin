@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.11"
   s.add_dependency 'bcrypt-ruby'
   s.add_dependency 'bson_ext'
-  s.add_dependency 'flash-dance'
   s.add_dependency 'mongoid'
   s.add_dependency 'omniauth-identity'
   

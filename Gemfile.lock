@@ -1,17 +1,9 @@
-GIT
-  remote: https://github.com/MunkiPhD/flash-dance.git
-  revision: 2323b643bda3bce3cdbc203319b89e101c488d95
-  specs:
-    flash-dance (0.0.1)
-      rails (~> 3.2.0)
-
 PATH
   remote: .
   specs:
     identity-engine (0.0.1)
       bcrypt-ruby
       bson_ext
-      flash-dance
       mongoid
       omniauth-identity
       rails (~> 3.2.11)
@@ -159,7 +151,6 @@ DEPENDENCIES
   bson_ext
   capybara
   database_cleaner
-  flash-dance!
   identity-engine!
   jquery-rails
   mongoid
