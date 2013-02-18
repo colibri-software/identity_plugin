@@ -13552,3 +13552,1984 @@ Served asset /identity-engine/application.js - 304 Not Modified (1ms)
 
 Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-11 11:19:51 -0400
 Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-14 14:23:43 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (2.2ms)
+Completed 200 OK in 49ms (Views: 49.3ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /identity-engine/home.css - 200 OK (3ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 200 OK (1ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /identity-engine/application.css - 200 OK (4ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /identity-engine/identities.css - 200 OK (2ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /identity-engine/sessions.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 200 OK (2ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /identity-engine/home.js - 200 OK (1ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /identity-engine/identities.js - 200 OK (2ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /identity-engine/sessions.js - 200 OK (1ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-14 14:23:44 -0400
+Served asset /identity-engine/application.js - 200 OK (12ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-14 14:23:45 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.2ms)
+Completed 200 OK in 7ms (Views: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.1ms)
+Completed 200 OK in 13ms (Views: 13.0ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /identity-engine/application.css - 200 OK (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /identity-engine/sessions.css - 200 OK (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /identity-engine/identities.css - 200 OK (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /identity-engine/home.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /identity-engine/home.js - 200 OK (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /identity-engine/identities.js - 200 OK (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /identity-engine/sessions.js - 200 OK (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 10:09:13 -0400
+Served asset /identity-engine/application.js - 200 OK (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 10:09:18 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.8ms)
+Completed 200 OK in 6ms (Views: 5.9ms)
+
+
+Started POST "/locomotive/plugins/identity_plugin/auth/identity/callback" for 127.0.0.1 at 2013-02-15 10:09:22 -0400
+
+ActionController::RoutingError (No route matches [POST] "/locomotive/plugins/identity_plugin/auth/identity/callback"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/locomotive/plugins/identity_plugin/auth/identity/callback" for 127.0.0.1 at 2013-02-15 10:23:44 -0400
+
+ActionController::RoutingError (No route matches [POST] "/locomotive/plugins/identity_plugin/auth/identity/callback"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 11:13:49 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `full_path' for #<IdentityEngine::Engine:0x00000001525cf0>):
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/controllers/identity_engine/sessions_controller.rb:9:in `new'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:403:in `_run__4341620037552121313__process_action__1012698230474359163__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:394:in `call_app!'
+  omniauth-identity (1.1.0) lib/omniauth/strategies/identity.rb:36:in `other_phase'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:176:in `call!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.2) lib/omniauth/builder.rb:48:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.0.21) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__3137358286175925547__call__4555242601716177404__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 11:23:29 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (1.9ms)
+Completed 200 OK in 43ms (Views: 42.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 11:23:32 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.2ms)
+Completed 200 OK in 7ms (Views: 6.6ms)
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-15 11:23:45 -0400
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6614ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_identities selector={"$query"=>{"email"=>"lourens@lourens.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6881ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i55EamHWYEoQgTevzz+bsRDLWJXUzl4o/FEIfwKtzV4=", "auth_key"=>"lourens@lourens.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"511503c3a395476c11000014"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9438ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_development collection=identity_engine_users documents=[{"_id"=>"511e5302a39547e883000001", "provider"=>"identity", "uid"=>"511503c3a395476c11000014", "name"=>"Lourens"}] flags=[] (0.1879ms)
+Completed 500 Internal Server Error in 13ms
+
+NoMethodError (undefined method `plugin_object' for #<IdentityEngine::Engine:0x00000000f7ee50>):
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/controllers/identity_engine/sessions_controller.rb:38:in `sign_in_msg'
+  /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/controllers/identity_engine/sessions_controller.rb:16:in `create'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:403:in `_run__4215471223232663879__process_action__2301259834610231264__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:394:in `call_app!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:356:in `callback_phase'
+  omniauth-identity (1.1.0) lib/omniauth/strategies/identity.rb:25:in `callback_phase'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.2) lib/omniauth/builder.rb:48:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.0.21) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__4597811251366034529__call__4547211926561866637__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-15 11:38:25 -0400
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6309ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_identities selector={"$query"=>{"email"=>"lourens@lourens.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7002ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i55EamHWYEoQgTevzz+bsRDLWJXUzl4o/FEIfwKtzV4=", "auth_key"=>"lourens@lourens.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"511503c3a395476c11000014"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5889ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_development collection=identity_engine_users documents=[{"_id"=>"511e5671a395479a74000001", "provider"=>"identity", "uid"=>"511503c3a395476c11000014", "name"=>"Lourens"}] flags=[] (0.1698ms)
+Completed 500 Internal Server Error in 11ms
+
+NoMethodError (undefined method `[]' for #<Rails::Engine::Configuration:0x000000037859f8>):
+  railties (3.2.11) lib/rails/railtie/configuration.rb:85:in `method_missing'
+  /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/controllers/identity_engine/sessions_controller.rb:38:in `sign_in_msg'
+  /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/controllers/identity_engine/sessions_controller.rb:16:in `create'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:403:in `_run__3294434702596184978__process_action__4202781341285089566__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:394:in `call_app!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:356:in `callback_phase'
+  omniauth-identity (1.1.0) lib/omniauth/strategies/identity.rb:25:in `callback_phase'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.2) lib/omniauth/builder.rb:48:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.0.21) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__3828756736237400695__call__2757131942394125427__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (2.1ms)
+Completed 200 OK in 43ms (Views: 42.5ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:54 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (38ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 6ms (Views: 6.0ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 12:03:55 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 12:05:20 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.9ms)
+Completed 200 OK in 6ms (Views: 6.2ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 12:05:21 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (1ms)
+
+
+Started GET "/auth/identity/callback" for 127.0.0.1 at 2013-02-15 12:06:18 -0400
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7548ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_identities selector={"$query"=>{"email"=>nil}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7620ms)
+
+OmniAuth::Error (invalid_credentials):
+  omniauth (1.1.2) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+  omniauth (1.1.2) lib/omniauth/failure_endpoint.rb:20:in `call'
+  omniauth (1.1.2) lib/omniauth/failure_endpoint.rb:12:in `call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:459:in `fail!'
+  omniauth-identity (1.1.0) lib/omniauth/strategies/identity.rb:24:in `callback_phase'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.2) lib/omniauth/builder.rb:48:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.0.21) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__792420524851494259__call__2431625232109500294__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.7ms)
+Completed 200 OK in 7ms (Views: 6.6ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 12:06:32 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (0ms)
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-15 12:06:44 -0400
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4663ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_identities selector={"$query"=>{"email"=>"lourens@lourens.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4835ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i55EamHWYEoQgTevzz+bsRDLWJXUzl4o/FEIfwKtzV4=", "auth_key"=>"lourens@lourens.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"511503c3a395476c11000014"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5798ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_development collection=identity_engine_users documents=[{"_id"=>"511e5d14a395473f35000001", "provider"=>"identity", "uid"=>"511503c3a395476c11000014", "name"=>"Lourens"}] flags=[] (0.0970ms)
+Completed 500 Internal Server Error in 11ms
+
+NoMethodError (undefined method `[]' for #<Rails::Engine::Configuration:0x000000023616c0>):
+  railties (3.2.11) lib/rails/railtie/configuration.rb:85:in `method_missing'
+  /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/controllers/identity_engine/sessions_controller.rb:38:in `sign_in_msg'
+  /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/controllers/identity_engine/sessions_controller.rb:16:in `create'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:403:in `_run__1139975939805313591__process_action__3738292768724542761__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:394:in `call_app!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:356:in `callback_phase'
+  omniauth-identity (1.1.0) lib/omniauth/strategies/identity.rb:25:in `callback_phase'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.2) lib/omniauth/builder.rb:48:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.0.21) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__792420524851494259__call__2431625232109500294__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 12:07:18 -0400
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/plugin/login" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.3ms)
+Completed 200 OK in 40ms (Views: 39.3ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 12:07:23 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 12:07:24 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (13ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 12:56:44 -0400
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 12:57:19 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (18.8ms)
+Completed 200 OK in 43ms (Views: 41.3ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 12:57:20 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (10ms)
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-15 12:57:28 -0400
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5112ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_identities selector={"$query"=>{"email"=>"lourens@lourens.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5729ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i55EamHWYEoQgTevzz+bsRDLWJXUzl4o/FEIfwKtzV4=", "auth_key"=>"lourens@lourens.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"511503c3a395476c11000014"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6597ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_development collection=identity_engine_users documents=[{"_id"=>"511e68f8a395475b1a000001", "provider"=>"identity", "uid"=>"511503c3a395476c11000014", "name"=>"Lourens"}] flags=[] (0.0970ms)
+Completed 500 Internal Server Error in 11ms
+
+NoMethodError (undefined method `[]' for #<Rails::Engine::Configuration:0x000000025f82a8>):
+  railties (3.2.11) lib/rails/railtie/configuration.rb:85:in `method_missing'
+  /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/controllers/identity_engine/sessions_controller.rb:38:in `sign_in_msg'
+  /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/controllers/identity_engine/sessions_controller.rb:16:in `create'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:403:in `_run__1447604370910136696__process_action__1564229164011707411__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:394:in `call_app!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:356:in `callback_phase'
+  omniauth-identity (1.1.0) lib/omniauth/strategies/identity.rb:25:in `callback_phase'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.2) lib/omniauth/builder.rb:48:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.0.21) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__3082661572901066960__call__1853078599581585805__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7195ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_identities selector={"$query"=>{"email"=>"lourens@lourens.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5467ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i55EamHWYEoQgTevzz+bsRDLWJXUzl4o/FEIfwKtzV4=", "auth_key"=>"lourens@lourens.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"511503c3a395476c11000014"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4773ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_development collection=identity_engine_users documents=[{"_id"=>"511e6bd2a39547d186000001", "provider"=>"identity", "uid"=>"511503c3a395476c11000014", "name"=>"Lourens"}] flags=[] (0.0939ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (2.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"_id"=>"511e6bd2a39547d186000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3183ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/flash_dance/_notice.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 49.5ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 13:09:38 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (29ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (2.0ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/flash_dance/_notice.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 66.2ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:03 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.2ms)
+Completed 200 OK in 10ms (Views: 8.4ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:04 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (1ms)
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6180ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_identities selector={"$query"=>{"email"=>"lourens@lourens.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6390ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i55EamHWYEoQgTevzz+bsRDLWJXUzl4o/FEIfwKtzV4=", "auth_key"=>"lourens@lourens.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"511503c3a395476c11000014"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6077ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_development collection=identity_engine_users documents=[{"_id"=>"511e7117a395473314000001", "provider"=>"identity", "uid"=>"511503c3a395476c11000014", "name"=>"Lourens"}] flags=[] (0.0906ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"_id"=>"511e7117a395473314000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4444ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/flash_dance/_notice.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 8.0ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:07 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-02-15 13:32:08 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 13:32:08 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/flash_dance/_notice.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 10.1ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 13:32:09 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 14:16:41 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (2.7ms)
+Completed 200 OK in 63ms (Views: 61.9ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 14:16:41 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 14:16:41 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 14:16:41 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:41 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 14:16:41 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 14:16:41 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:41 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:42 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:42 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:42 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:42 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:42 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (12ms)
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-15 14:16:44 -0400
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7932ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_identities selector={"$query"=>{"email"=>"lourens@lourens.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6406ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i55EamHWYEoQgTevzz+bsRDLWJXUzl4o/FEIfwKtzV4=", "auth_key"=>"lourens@lourens.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"511503c3a395476c11000014"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5851ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_development collection=identity_engine_users documents=[{"_id"=>"511e7b8ca39547e6cc000001", "provider"=>"identity", "uid"=>"511503c3a395476c11000014", "name"=>"Lourens"}] flags=[] (0.0999ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 14:16:44 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"_id"=>"511e7b8ca39547e6cc000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4435ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/flash_dance/_notice.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 33.7ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 14:16:44 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 14:16:44 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 14:16:45 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:45 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 14:16:45 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 14:16:45 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:45 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:45 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:45 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:45 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:45 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 14:16:45 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-02-15 14:17:21 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 14:17:21 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/flash_dance/_notice.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.7ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:21 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:21 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:22 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (1ms)
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-15 14:17:37 -0400
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7358ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_identities selector={"$query"=>{"email"=>"test@example.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3610ms)
+
+OmniAuth::Error (invalid_credentials):
+  omniauth (1.1.2) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+  omniauth (1.1.2) lib/omniauth/failure_endpoint.rb:20:in `call'
+  omniauth (1.1.2) lib/omniauth/failure_endpoint.rb:12:in `call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:459:in `fail!'
+  omniauth-identity (1.1.0) lib/omniauth/strategies/identity.rb:24:in `callback_phase'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.2) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.2) lib/omniauth/builder.rb:48:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.0.21) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.0.21) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__3211196756709578849__call__4208274590589541044__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/daniel/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/daniel/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.7ms)
+Completed 200 OK in 6ms (Views: 5.9ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:42 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (0ms)
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-15 14:17:44 -0400
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0345ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_identities selector={"$query"=>{"email"=>"lourens@lourens.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6256ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i55EamHWYEoQgTevzz+bsRDLWJXUzl4o/FEIfwKtzV4=", "auth_key"=>"lourens@lourens.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"511503c3a395476c11000014"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7644ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_development collection=identity_engine_users documents=[{"_id"=>"511e7bc9a3954782ba000002", "provider"=>"identity", "uid"=>"511503c3a395476c11000014", "name"=>"Lourens"}] flags=[] (0.1650ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_development collection=identity_engine_users selector={"_id"=>"511e7bc9a3954782ba000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3705ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/flash_dance/_notice.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 11.1ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 14:17:45 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/flash_dance/_notice.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.6ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:46 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.5ms)
+
+
+Started GET "/assets/identity-engine/identities.css?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /identity-engine/identities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.css?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /identity-engine/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.css?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /identity-engine/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.css?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.css?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /identity-engine/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/flash_dance.alerts.bootstrap.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /identity-engine/flash_dance.alerts.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/home.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /identity-engine/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/identities.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /identity-engine/identities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/sessions.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /identity-engine/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/identity-engine/application.js?body=1" for 127.0.0.1 at 2013-02-15 14:19:47 -0400
+Served asset /identity-engine/application.js - 304 Not Modified (26ms)

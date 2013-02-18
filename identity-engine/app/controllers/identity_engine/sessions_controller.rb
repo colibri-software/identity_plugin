@@ -4,14 +4,16 @@ require_dependency 'flash-dance'
 module IdentityEngine
   class SessionsController < ApplicationController
     def new
-      session[:identity_return_to] ||= request.referer
       redirect_to request.referer, :info => 'Already signed in!' if current_user
+      session[:identity_return_to] ||= request.referer
+      @form_path = root_path + 'auth/identity/callback'
     end
 
     def create
       auth = request.env["omniauth.auth"]
       user = User.where(:provider => auth["provider"], :auth => auth["uid"]).first || User.create_with_omniauth(auth)
       session[:user_id] = user.id
+      session[:identity_return_to] = root_path if session[:identity_return_to] == nil
       redirect_to session[:identity_return_to], :notice => sign_in_msg
     end
 
@@ -29,20 +31,16 @@ module IdentityEngine
     end
 
     private
-    def msg_config
-      @configuration ||= Config.first
-    end
-
     def sign_in_msg
-      msg_or_default(Engine.plugin_object.config['sign_in_msg'], 'Signed in!')
+      msg_or_default(Engine.config_hash['sign_in_msg'], 'Signed in!')
     end
 
     def sign_out_msg
-      msg_or_default(Engine.plugin_object.config['sign_out_msg'], 'Signed out!')
+      msg_or_default(Engine.config_hash['sign_out_msg'], 'Signed out!')
     end
 
     def error_msg
-      msg_or_default(Engine.plugin_object.config['error_msg'], 'Authentication failed, please try again!')
+      msg_or_default(Engine.config_hash['error_msg'], 'Authentication failed, please try again!')
     end
 
     # return the msg if it's not empty otherwise return the default

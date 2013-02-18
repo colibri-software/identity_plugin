@@ -2,7 +2,7 @@
 <%= link_to "Create an account", new_identity_path %> or login below.
 </p>
 
-<%= form_tag "/locomotive/plugins/identity_plugin/auth/identity/callback" do %>
+<%= form_tag @form_path do %>
   <div class="field">
     <%= label_tag :auth_key, "Email" %><br>
     <%= text_field_tag :auth_key %>
