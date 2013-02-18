@@ -57,7 +57,7 @@ describe "Account pages" do
       create_new_user('test', 'valid@example.com', 'test!password')
       find_link('Sign Out').click
       visit login_path
-      fill_in 'Email', with: 'valid@example.com'
+      fill_in 'Email',    with: 'valid@example.com'
       fill_in 'Password', with: 'test!password'
       click_button('Login')
       page.should have_content('Welcome test!')

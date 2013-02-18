@@ -1,5 +1,4 @@
 require_dependency "identity_engine/application_controller"
-require_dependency 'flash-dance'
 
 module IdentityEngine
   class SessionsController < ApplicationController

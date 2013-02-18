@@ -1,1 +1,9 @@
+<div class="user-nav">
+  <% if current_user %>
+    Welcome <%= current_user.name %>!
+    <%= link_to "Sign Out", logout_path %>
+  <% else %>
+    <%= link_to "Sign in or sign up", login_path %>
+  <% end %>
+</div>
 <br />

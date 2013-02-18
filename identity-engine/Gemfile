@@ -9,7 +9,6 @@ gemspec
 gem "jquery-rails"
 gem 'bcrypt-ruby'
 gem 'bson_ext'
-gem 'flash-dance', :git => 'https://github.com/MunkiPhD/flash-dance.git'
 gem 'mongoid'
 gem 'omniauth-identity'
 

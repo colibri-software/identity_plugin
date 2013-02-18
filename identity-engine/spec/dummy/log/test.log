@@ -3233,3 +3233,1044 @@ Completed 200 OK in 2ms (Views: 1.9ms)
   MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2568ms)
   MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0463ms)
   MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0434ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5050ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4594ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0465ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0312ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.8025ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:43 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (24.2ms)
+Completed 200 OK in 56ms (Views: 55.3ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:43 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4575ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225f2ba395473895000001", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$Cv47DKwNw3x4LwPm6bZDTOQ.oY8GLuJUxqQvvHzR7TGQHO3CaL3lK"}] flags=[] (0.0908ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225f2ba395473895000001"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.3932ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225f2ba395473895000002", "provider"=>"identity", "uid"=>"51225f2ba395473895000001", "name"=>"test"}] flags=[] (0.0877ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:43 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225f2ba395473895000002"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3557ms)
+Completed 200 OK in 4ms (Views: 3.5ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3278ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3839ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0443ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0303ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3982ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0398ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0472ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2406ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:43 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:43 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"@invalid.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4160ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"@invalid.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3910ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3350ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0451ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0319ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3886ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0398ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0391ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2761ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:43 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:43 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4363ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3636ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3834ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0429ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0303ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4554ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.1013ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0663ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3698ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.9ms)
+Completed 200 OK in 3ms (Views: 3.1ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4442ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3655ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3967ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0453ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0308ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3750ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0608ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0308ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3982ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225f2ca395473895000003", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$L6KiYkw5zsXjsALwRnH43ezcPUeM3Vib1WQ5PIBtGojK8u8iaypnC"}] flags=[] (0.0820ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225f2ca395473895000003"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.3934ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225f2ca395473895000004", "provider"=>"identity", "uid"=>"51225f2ca395473895000003", "name"=>"test"}] flags=[] (0.1249ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225f2ca395473895000004"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4086ms)
+Completed 200 OK in 3ms (Views: 3.2ms)
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+Completed 200 OK in 2ms (Views: 2.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4373ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0918ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0708ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3476ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0811ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0677ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.9ms)
+Completed 200 OK in 3ms (Views: 3.0ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3648ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225f2ca395473895000005", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$bTHQu9PcOb4JispV0TGxS.1NfzN8SS/13gvwN5hcml6OCFV5JFAnq"}] flags=[] (0.1428ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225f2ca395473895000005"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4694ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225f2ca395473895000006", "provider"=>"identity", "uid"=>"51225f2ca395473895000005", "name"=>"test"}] flags=[] (0.1233ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225f2ca395473895000006"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4232ms)
+Completed 200 OK in 3ms (Views: 3.3ms)
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms)
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"$query"=>{"email"=>"valid@example.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.6108ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "auth_key"=>"valid@example.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225f2ca395473895000005"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.5431ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225f2ca395473895000007", "provider"=>"identity", "uid"=>"51225f2ca395473895000005", "name"=>"test"}] flags=[] (0.0801ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225f2ca395473895000007"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5088ms)
+Completed 200 OK in 29ms (Views: 29.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5541ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0882ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0710ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4463ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0834ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0715ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4287ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0439ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0353ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2832ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0503ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0365ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4661ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0429ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0317ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2911ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0432ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0312ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5238ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0806ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0882ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5171ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.1061ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.1030ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4597ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0522ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0346ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4113ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0739ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0498ms)
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:44 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.1ms)
+Completed 200 OK in 2ms (Views: 2.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4938ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0434ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0327ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.1991ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0350ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0305ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6385ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5076ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0875ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0618ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3428ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:58 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (23.8ms)
+Completed 200 OK in 54ms (Views: 54.0ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:58 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4559ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225f3aa395475ea8000001", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$v6GVZRNi8mLd5BXkzQ1VbuUOLLW86..3/v7ue2g4gslEAf6esf8Hm"}] flags=[] (0.0892ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225f3aa395475ea8000001"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4473ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225f3aa395475ea8000002", "provider"=>"identity", "uid"=>"51225f3aa395475ea8000001", "name"=>"test"}] flags=[] (0.0880ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:58 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225f3aa395475ea8000002"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4380ms)
+Completed 200 OK in 4ms (Views: 3.5ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3350ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4072ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0465ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0319ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3595ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0429ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0360ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.1915ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:58 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:58 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"@invalid.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3862ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"@invalid.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.9ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3164ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3140ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0503ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0362ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2391ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0439ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0331ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2038ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4201ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3579ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3965ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0436ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0312ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3531ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0458ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0339ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2189ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3836ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3345ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3610ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0446ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0312ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3376ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0441ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0339ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3765ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225f3ba395475ea8000003", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$5UstVvjzxWBWaNSrseM5OOHetLlinfO7MGvOXvppiJr1s87.YxMCW"}] flags=[] (0.1488ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225f3ba395475ea8000003"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.3939ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225f3ba395475ea8000004", "provider"=>"identity", "uid"=>"51225f3ba395475ea8000003", "name"=>"test"}] flags=[] (0.1223ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225f3ba395475ea8000004"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2775ms)
+Completed 200 OK in 2ms (Views: 1.9ms)
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3655ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0515ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0331ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2604ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0536ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0319ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3498ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225f3ba395475ea8000005", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$0lHF9lZzDfXwmim7YrzUj.drO7yGSnS/KDrZ/9rUCG80zvtxX1JjW"}] flags=[] (0.1698ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225f3ba395475ea8000005"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4742ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225f3ba395475ea8000006", "provider"=>"identity", "uid"=>"51225f3ba395475ea8000005", "name"=>"test"}] flags=[] (0.0672ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225f3ba395475ea8000006"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3533ms)
+Completed 200 OK in 3ms (Views: 2.5ms)
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.3ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms)
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"$query"=>{"email"=>"valid@example.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.5288ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "auth_key"=>"valid@example.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225f3ba395475ea8000005"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4601ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225f3ba395475ea8000007", "provider"=>"identity", "uid"=>"51225f3ba395475ea8000005", "name"=>"test"}] flags=[] (0.1543ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225f3ba395475ea8000007"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4129ms)
+Completed 200 OK in 4ms (Views: 3.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5412ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0899ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0644ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4585ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0894ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0644ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4952ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0439ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0319ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2928ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0446ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0324ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4942ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0460ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0312ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2851ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0443ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0308ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4950ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0458ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0327ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2372ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0410ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0300ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5195ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0515ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0358ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.7684ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0625ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0420ms)
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:04:59 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4299ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0937ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0417ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4158ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0517ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0386ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5674ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3626ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0467ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0341ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2682ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:23 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (23.8ms)
+Completed 200 OK in 55ms (Views: 54.1ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:23 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4551ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225fcba395476e3b000001", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$pbdsqwZPzHwxgbnSasr81ONU9rV2VqfdncDGyO35avwGEAe9td6rG"}] flags=[] (0.0913ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225fcba395476e3b000001"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4501ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225fcba395476e3b000002", "provider"=>"identity", "uid"=>"51225fcba395476e3b000001", "name"=>"test"}] flags=[] (0.0880ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:23 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225fcba395476e3b000002"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3965ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (31.6ms)
+Completed 500 Internal Server Error in 33ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5426ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0474ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0312ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3560ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0436ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0362ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2973ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:23 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.9ms)
+Completed 200 OK in 3ms (Views: 3.1ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:23 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"@invalid.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4110ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"@invalid.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.4034ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4027ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0460ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0305ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4342ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0415ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0417ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2983ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:23 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:23 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4308ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3607ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3982ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0427ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0303ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4363ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0594ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0336ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2341ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:23 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:23 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4365ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3746ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4015ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0470ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0315ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4294ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0427ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0350ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4153ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225fcca395476e3b000003", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$M5aCSTWPafUU1WbvzgAu4.bKw4RXAOesgWu0PEZGfVq46QREbg2q6"}] flags=[] (0.0806ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225fcca395476e3b000003"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.3929ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225fcca395476e3b000004", "provider"=>"identity", "uid"=>"51225fcca395476e3b000003", "name"=>"test"}] flags=[] (0.0675ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225fcca395476e3b000004"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3543ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (6.3ms)
+Completed 500 Internal Server Error in 7ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4778ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0503ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0327ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4392ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0517ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0486ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3684ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225fcca395476e3b000005", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$EiZjlrbR46QIh4f9tZmE5e8v2MxeD4oQcYMfWQdlcWUPTc0jciv/S"}] flags=[] (0.1445ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225fcca395476e3b000005"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.3817ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225fcca395476e3b000006", "provider"=>"identity", "uid"=>"51225fcca395476e3b000005", "name"=>"test"}] flags=[] (0.1197ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225fcca395476e3b000006"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4079ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (7.2ms)
+Completed 500 Internal Server Error in 8ms
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3936ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0467ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0308ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2491ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0432ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0341ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5093ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0494ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0312ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2518ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0794ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0710ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.1ms)
+Completed 200 OK in 4ms (Views: 3.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4909ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0441ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0303ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3493ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0377ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0305ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5491ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0927ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0706ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5784ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.1082ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.1965ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.7ms)
+Completed 200 OK in 2ms (Views: 2.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5319ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0770ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0432ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4332ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0997ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0501ms)
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:24 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5233ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0761ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0608ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5972ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0861ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0637ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6363ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4411ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0885ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0634ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2825ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (23.6ms)
+Completed 200 OK in 54ms (Views: 54.1ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4747ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225fdca39547f562000001", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$MP5kluTGcA1vrNpZGyJ5BeD/P1wHorQARY4G2v6Pc22SRlNyzrUMi"}] flags=[] (0.0889ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225fdca39547f562000001"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4923ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225fdca39547f562000002", "provider"=>"identity", "uid"=>"51225fdca39547f562000001", "name"=>"test"}] flags=[] (0.0904ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225fdca39547f562000002"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3469ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3343ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4175ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0482ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0319ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3533ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0417ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0436ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2782ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.1ms)
+Completed 200 OK in 4ms (Views: 3.1ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"@invalid.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4377ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"@invalid.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.9ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.4063ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4144ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0529ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0360ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4427ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0424ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0381ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2060ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3889ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2956ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2718ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0439ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0322ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2453ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0420ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0446ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2601ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3521ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2789ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2775ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0467ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0312ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2499ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0429ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0358ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:40 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3495ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225fdca39547f562000003", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$WDSG2ELyjj9Urone63OZruYRnLFVyrUN.D.iPpgrPN3pVK.lY8WDG"}] flags=[] (0.1450ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225fdca39547f562000003"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4032ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225fdda39547f562000004", "provider"=>"identity", "uid"=>"51225fdca39547f562000003", "name"=>"test"}] flags=[] (0.1214ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225fdda39547f562000004"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3915ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.4ms)
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.3ms)
+Completed 200 OK in 1ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4191ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0491ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0322ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2308ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0439ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0465ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3815ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225fdda39547f562000005", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$f3hfY2wy2eQ1a/frs2pDBeNuyQxJVaW6qrEEMh.zB5FOAuGcV4DfC"}] flags=[] (0.1438ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225fdda39547f562000005"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.3984ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225fdda39547f562000006", "provider"=>"identity", "uid"=>"51225fdda39547f562000005", "name"=>"test"}] flags=[] (0.1256ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225fdda39547f562000006"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4070ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms)
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms)
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"$query"=>{"email"=>"valid@example.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.5870ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "auth_key"=>"valid@example.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225fdda39547f562000005"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4749ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225fdda39547f562000007", "provider"=>"identity", "uid"=>"51225fdda39547f562000005", "name"=>"test"}] flags=[] (0.1490ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225fdda39547f562000007"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4041ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3726ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0510ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0329ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2539ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0436ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0341ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3798ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0443ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0322ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3428ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0415ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0343ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.7ms)
+Completed 200 OK in 2ms (Views: 2.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4594ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0501ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0403ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3664ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0811ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0641ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4711ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0901ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0694ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4334ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0906ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0856ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4237ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.1063ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0567ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4156ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0596ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0370ms)
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:41 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4845ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0458ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0327ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.1922ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0348ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0308ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5503ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4556ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0830ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0892ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3052ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (23.8ms)
+Completed 200 OK in 54ms (Views: 53.8ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4561ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225fefa39547880d000001", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$YmyhkeeOmtT5uGH4WvDtMe9ur5rvC/PKjf7w6nFutbDjmOt59VeDe"}] flags=[] (0.0892ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225fefa39547880d000001"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4530ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225fefa39547880d000002", "provider"=>"identity", "uid"=>"51225fefa39547880d000001", "name"=>"test"}] flags=[] (0.0863ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225fefa39547880d000002"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4008ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.6ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3548ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4225ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0491ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0310ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4597ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0894ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0694ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3400ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"@invalid.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4237ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"@invalid.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.4702ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4084ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0482ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0336ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4280ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0556ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0486ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2401ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4280ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3579ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3920ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0424ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0308ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4334ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0448ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0341ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.2830ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4137ms)
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register"}
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=dummy_test command={:count=>"identity_engine_users", :query=>{}} (0.3605ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3941ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0434ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0310ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2511ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0458ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0339ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3707ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225fefa39547880d000003", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$pjVapQYmCJfigNIrFttICu0AM.ZtEeq.UcBid/EClBV8LrWDUq7nK"}] flags=[] (0.1447ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225fefa39547880d000003"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4027ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225fefa39547880d000004", "provider"=>"identity", "uid"=>"51225fefa39547880d000003", "name"=>"test"}] flags=[] (0.1228ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225fefa39547880d000004"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4070ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (1.6ms)
+Completed 200 OK in 3ms (Views: 3.3ms)
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.3ms)
+Completed 200 OK in 1ms (Views: 1.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4244ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0491ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0308ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2491ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0417ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0381ms)
+Started GET "/identities/new" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+Processing by IdentityEngine::IdentitiesController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/identities/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms)
+Started POST "/auth/identity/register" for 127.0.0.1 at 2013-02-18 13:07:59 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"email"=>"valid@example.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3281ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_identities documents=[{"_id"=>"51225ff0a39547880d000005", "name"=>"test", "email"=>"valid@example.com", "password_digest"=>"$2a$10$48xVQtqGqwUywJSYqxUQcuaReHoJqZHeAY0ArWGUSfm8Ahd0wxxoe"}] flags=[] (0.0818ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Register", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225ff0a39547880d000005"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.2928ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225ff0a39547880d000006", "provider"=>"identity", "uid"=>"51225ff0a39547880d000005", "name"=>"test"}] flags=[] (0.0637ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225ff0a39547880d000006"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.2813ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.8ms)
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+Processing by IdentityEngine::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms)
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_identities selector={"$query"=>{"email"=>"valid@example.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.5610ms)
+Processing by IdentityEngine::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "auth_key"=>"valid@example.com", "password"=>"[FILTERED]", "commit"=>"Login", "provider"=>"identity"}
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"$query"=>{"provider"=>"identity", "auth"=>"51225ff0a39547880d000005"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.5181ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dummy_test collection=identity_engine_users documents=[{"_id"=>"51225ff0a39547880d000007", "provider"=>"identity", "uid"=>"51225ff0a39547880d000005", "name"=>"test"}] flags=[] (0.0851ms)
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=identity_engine_users selector={"_id"=>"51225ff0a39547880d000007"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3407ms)
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (1.1ms)
+Completed 200 OK in 2ms (Views: 2.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4482ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0911ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0660ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4959ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.1099ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.1078ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4838ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0815ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0689ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6402ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0994ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0727ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4592ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0844ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0627ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4494ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0827ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0684ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (1.1ms)
+Completed 200 OK in 4ms (Views: 3.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5569ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0517ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0372ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.7279ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0584ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0403ms)
+Started GET "/login" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+Processing by IdentityEngine::SessionsController#new as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/sessions/new.html.erb within layouts/identity_engine/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4315ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0589ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0386ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4301ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0534ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0374ms)
+Started GET "/" for 127.0.0.1 at 2013-02-18 13:08:00 -0400
+Processing by IdentityEngine::HomeController#index as HTML
+  Rendered /home/daniel/Documents/myapp/identity-plugin/identity-engine/app/views/identity_engine/home/index.html.erb within layouts/identity_engine/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5021ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0603ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0377ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dummy_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.8750ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_identities selector={} flags=[] (0.0670ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dummy_test collection=identity_engine_users selector={} flags=[] (0.0615ms)
