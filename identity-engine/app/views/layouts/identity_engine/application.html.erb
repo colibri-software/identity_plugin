@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IdentityEngine</title>
+    <%= stylesheet_link_tag    "identity-engine/application", :media => "all" %>
+    <%= javascript_include_tag "identity-engine/application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="user-nav">
+      <% if current_user %>
+        Welcome <%= current_user.name %>!
+        <%= link_to "Sign Out", logout_path %>
+      <% else %>
+        <%= link_to "Sign in or sign up", login_path %>
+      <% end %>
+    </div>
+    <%= render_flash_messages %>
+
+    <%= yield %>
+
+  </body>
+</html>
+
