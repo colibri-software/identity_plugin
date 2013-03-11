@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     identity_plugin (0.0.1)
-      locomotive_plugins (= 1.0.0.beta9)
+      locomotive_plugins (= 1.0.0.beta10)
 
 PATH
   remote: identity-engine
@@ -51,14 +51,14 @@ GEM
       bson (~> 1.8.2)
     builder (3.0.4)
     erubis (2.7.0)
-    haml (3.1.7)
+    haml (3.1.8)
     hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
     json (1.7.7)
     locomotive_liquid (2.4.2)
-    locomotive_plugins (1.0.0.beta9)
+    locomotive_plugins (1.0.0.beta10)
       bson_ext
       haml (~> 3.1)
       locomotive_liquid (~> 2.4)
