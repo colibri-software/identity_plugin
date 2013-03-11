@@ -11,10 +11,10 @@ module IdentityPlugin
   class IdentityPlugin
     include Locomotive::Plugin
 
-    def rack_app
-      app = IdentityEngine::Engine
-      app.config_hash = config
-      app
+    before_rack_app_request :set_config
+
+    def self.rack_app
+      IdentityEngine::Engine
     end
 
     def config_template_file
@@ -67,6 +67,10 @@ module IdentityPlugin
         ret << "<p class='flash_#{type}'>#{@controller.flash[type]}</p>" if @controller.flash[type]
       end
       ret
+    end
+
+    def set_config
+      mounted_rack_app.config_hash = config
     end
 
   end
