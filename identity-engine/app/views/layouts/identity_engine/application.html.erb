@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IdentityEngine</title>
+    <%= stylesheet_link_tag    "identity-engine/application", :media => "all" %>
+    <% if custom_stylesheet %>
+      <%= stylesheet_link_tag  custom_stylesheet %>
+    <% end %>
+    <%= javascript_include_tag "identity-engine/application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= yield %>
+
+  </body>
+</html>
+
