@@ -10,7 +10,7 @@ module IdentityEngine
 
     def create
       auth = request.env["omniauth.auth"]
-      user = User.where(:provider => auth["provider"], :auth => auth["uid"]).first || User.create_with_omniauth(auth)
+      user = User.where(:provider => auth["provider"], :uid => auth["uid"]).first || User.create_with_omniauth(auth)
       session[:user_id] = user.id
       session[:identity_return_to] = root_path if session[:identity_return_to] == nil
       redirect_to session[:identity_return_to], :notice => sign_in_msg
