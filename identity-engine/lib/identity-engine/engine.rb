@@ -10,5 +10,9 @@ module IdentityEngine
       @config_hash ||= {}
     end
 
+    def self.config_or_default(key, default)
+      msg = config_hash[key]
+      msg && !msg.empty? ? msg : default
+    end
   end
 end

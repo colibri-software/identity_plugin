@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.description = "This plugin provides features through omniauth-identity for users to sign up/in and logout."
 
   s.add_dependency 'locomotive_plugins',    '1.0.0.beta10'
+  s.add_dependency 'cells'
 
   s.required_rubygems_version = ">= 1.3.6"
 
