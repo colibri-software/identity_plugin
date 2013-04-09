@@ -66,8 +66,7 @@ module IdentityPlugin
     # form drops
     #############
     def login_form
-      user = current_user
-      controller_code { do_login('/locomotive/plugins/identity_plugin/', user) }
+      controller_code { do_login('/locomotive/plugins/identity_plugin/') }
     end
 
     def logout_form

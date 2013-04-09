@@ -1,8 +1,8 @@
 module IdentityEngine
   module IdentityHelper
-    def do_login(path, user)
+    def do_login(path)
       session[:id_reg] = nil
-      if user
+      if current_user
         flash[:info] = 'Already signed in!'
       else
         session[:identity_return_to] = request.referer
@@ -23,8 +23,12 @@ module IdentityEngine
     end
 
     def do_signup(path)
-      render_cell 'identity_engine/identities', :new,
-        stem: path, identity: session[:id_reg]
+      if current_user
+        flash[:info] = 'Already signed in!'
+      else
+        render_cell 'identity_engine/identities', :new,
+          stem: path, identity: session[:id_reg]
+      end
     end
 
     def current_user

@@ -1,6 +1,6 @@
 class TestController < ApplicationController
   def login
-    render :text => do_login('/', current_user)
+    render :text => do_login('/')
   end
 
   def logout
