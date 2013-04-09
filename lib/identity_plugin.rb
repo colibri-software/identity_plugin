@@ -67,41 +67,21 @@ module IdentityPlugin
     #############
     def login_form
       user = current_user
-      controller_code do
-        if user
-          flash[:info] = 'Already signed in!'
-        else
-          session[:identity_return_to] = request.referer
-          render_cell 'identity_engine/sessions', :new,
-            :stem => '/locomotive/plugins/identity_plugin/'
-        end
-      end
+      controller_code { do_login('/locomotive/plugins/identity_plugin/', user) }
     end
 
     def logout_form
-      msg = mounted_rack_app.config_or_default('sign_out_msg', 'Signed out!') 
-      controller_code do
-        if session[:user_id]
-          session[:user_id] = nil
-          flash[:notice] = msg
-        else
-          flash[:info] = 'Already logged out!'
-        end
-        redirect_to :back
-      end
+      controller_code { do_logout('/locomotive/plugins/identity_plugin/') }
     end
 
     def sign_up_form
-      controller_code do
-        render_cell 'identity_engine/identities', :new,
-          :stem => '/locomotive/plugins/identity_plugin/'
-      end
+      controller_code { do_signup('/locomotive/plugins/identity_plugin/') } 
     end
 
 
     private
     def current_user
-      @current_user ||= IdentityEngine::User.find(@controller.session[:user_id]) if @controller.session[:user_id]
+      controller_code { current_user }
     end
 
     def render_flash_messages
@@ -118,6 +98,11 @@ module IdentityPlugin
 
     def controller_code(&block)
       raise "Identity plugin missing controller" if self.controller == nil
+      self.controller.instance_eval do
+        if !self.is_a? IdentityEngine::IdentityHelper
+          extend IdentityEngine::IdentityHelper
+        end
+      end
       self.controller.instance_eval(&block)
     end
   end

@@ -14,6 +14,5 @@ module IdentityPlugin
     protected
     
     attr_reader :source
-
   end
 end

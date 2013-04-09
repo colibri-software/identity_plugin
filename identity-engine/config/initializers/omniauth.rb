@@ -4,4 +4,3 @@ IdentityEngine::Engine.config.middleware.use OmniAuth::Builder do
     IdentityEngine::IdentitiesController.action(:new).call(env)
   }
 end
-

@@ -3,8 +3,8 @@ require_dependency "identity_engine/application_controller"
 module IdentityEngine
   class IdentitiesController < ApplicationController
     def new
-      @identity = env['omniauth.identity']
-      @form_path = root_path + 'auth/identity/register'
+      session[:id_reg] = env['omniauth.identity']
+      redirect_to Engine.config_or_default('sign_up_url', '/signup')
     end
   end
 end

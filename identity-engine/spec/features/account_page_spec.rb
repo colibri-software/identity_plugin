@@ -23,7 +23,7 @@ describe "Account pages" do
     describe "with password confirmation that doesn't match password" do
       it "should not create a new user" do
         IdentityEngine::User.count.should == 0
-        visit new_identity_path
+        visit main_app.signup_path
         fill_in 'Name',                   with: 'test'
         fill_in 'Email',                  with: 'valid@example.com'
         find(:css, "input[id$='password']").set('test!password')
@@ -56,7 +56,7 @@ describe "Account pages" do
     it "should have content saying 'Welcome :user.name'" do
       create_new_user('test', 'valid@example.com', 'test!password')
       find_link('Sign Out').click
-      visit login_path
+      visit main_app.login_path
       fill_in 'Email',    with: 'valid@example.com'
       fill_in 'Password', with: 'test!password'
       click_button('Login')
@@ -67,30 +67,25 @@ describe "Account pages" do
   # Not logged in
   describe "when the user is not logged in" do
     describe "when visting the login page" do
-      it "should have content saying 'login below'" do
-        visit login_path
-        page.should have_content("login below")
-      end
-
       it "should have an email field" do
-        visit login_path
+        visit main_app.login_path
         page.should have_field("Email")
       end
 
       it "should have a password field" do
-        visit login_path
+        visit main_app.login_path
         page.should have_field("Password")
       end
 
       it "should have a login button" do
-        visit login_path
+        visit main_app.login_path
         page.should have_button("Login")
       end
     end
 
     describe "when visiting the home page" do
       it "should have content saying 'sign in'" do
-        visit root_path
+        visit main_app.root_path
         page.should have_content("Sign in")
       end
     end
@@ -99,7 +94,7 @@ describe "Account pages" do
   # helpers
   private
   def create_new_user(name, email, password)
-    visit new_identity_path
+    visit main_app.signup_path
     fill_in 'Name',                   with: name
     fill_in 'Email',                  with: email
     find(:css, "input[id$='password']").set(password)
