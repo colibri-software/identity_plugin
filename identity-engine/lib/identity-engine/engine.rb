@@ -10,9 +10,18 @@ module IdentityEngine
       @config_hash ||= {}
     end
 
-    def self.config_or_default(key, default)
+    def self.config_or_default(key)
       msg = config_hash[key]
-      msg && !msg.empty? ? msg : default
+      return msg if msg && !msg.empty?
+
+      return 'Signed in!'  if key == 'sign_in_msg'
+      return 'Signed out!' if key == 'sign_out_msg'
+      return '/login'      if key == 'login_url'
+      return '/logout'     if key == 'logout_url'
+      return '/signup'     if key == 'sign_up_url'
+      if key == 'error_msg'
+        return 'Authentication failed, please try again!'
+      end
     end
   end
 end

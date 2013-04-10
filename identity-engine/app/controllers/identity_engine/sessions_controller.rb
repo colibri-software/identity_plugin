@@ -18,11 +18,11 @@ module IdentityEngine
 
     private
     def sign_in_msg
-      Engine.config_or_default('sign_in_msg', 'Signed in!')
+      Engine.config_or_default('sign_in_msg')
     end
 
     def error_msg
-      Engine.config_or_default('error_msg', 'Authentication failed, please try again!')
+      Engine.config_or_default('error_msg')
     end
   end
 end

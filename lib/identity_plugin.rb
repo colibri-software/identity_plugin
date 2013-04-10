@@ -5,12 +5,20 @@ require 'identity_plugin/rails_engine'
 require 'identity_plugin/identity_drop'
 
 module IdentityPlugin
+  class PluginHelper
+  end
+
   class IdentityPlugin
     include Locomotive::Plugin
 
     ########
     # setup
     ########
+    DEFAULTS = ['login_url', 'logout_url', 'sign_up_url']
+    DEFAULTS.each do |name|
+      define_method(name) { mounted_rack_app.config_or_default(name) }
+    end
+
     before_rack_app_request :set_config
 
     def self.rack_app
@@ -25,22 +33,10 @@ module IdentityPlugin
       @drop ||= IdentityDrop.new(self)
     end
 
-
-    ############
-    # url drops
-    ############
-    def login_url
-      mounted_rack_app.config_or_default('login_url', '/login')
+    def initialize
+      @helper = PluginHelper.new
+      @helper.instance_eval { extend IdentityEngine::IdentityHelper }
     end
-
-    def logout_url
-      mounted_rack_app.config_or_default('logout_url', '/logout')
-    end
-
-    def sign_up_url
-      mounted_rack_app.config_or_default('sign_up_url', '/signup')
-    end
-
 
     ##############
     # basic drops
@@ -66,21 +62,21 @@ module IdentityPlugin
     # form drops
     #############
     def login_form
-      controller_code { do_login('/locomotive/plugins/identity_plugin/') }
+       @helper.do_login('/locomotive/plugins/identity_plugin/', controller)
     end
 
     def logout_form
-      controller_code { do_logout('/locomotive/plugins/identity_plugin/') }
+      @helper.do_logout('/locomotive/plugins/identity_plugin/', controller)
     end
 
     def sign_up_form
-      controller_code { do_signup('/locomotive/plugins/identity_plugin/') } 
+      @helper.do_signup('/locomotive/plugins/identity_plugin/', controller)
     end
 
 
     private
     def current_user
-      controller_code { current_user }
+      @helper.current_user(controller)
     end
 
     def render_flash_messages
@@ -93,16 +89,6 @@ module IdentityPlugin
 
     def set_config
       mounted_rack_app.config_hash = config
-    end
-
-    def controller_code(&block)
-      raise "Identity plugin missing controller" if self.controller == nil
-      self.controller.instance_eval do
-        if !self.is_a? IdentityEngine::IdentityHelper
-          extend IdentityEngine::IdentityHelper
-        end
-      end
-      self.controller.instance_eval(&block)
     end
   end
 end
