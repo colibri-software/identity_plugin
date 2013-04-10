@@ -4,7 +4,7 @@ module IdentityPlugin
     delegate :login_url, :logout_url, :sign_up_url,
              :user, :is_signed_in, :user_id,
              :flash,
-             :login_form, :logout_form, :sign_up_form,
+             :login_form, :logout_form, :signup_form,
       to: :source
 
     def initialize(source)

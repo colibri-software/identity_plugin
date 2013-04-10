@@ -14,9 +14,16 @@ module IdentityPlugin
     ########
     # setup
     ########
-    DEFAULTS = ['login_url', 'logout_url', 'sign_up_url']
-    DEFAULTS.each do |name|
+    TAGS = ['login_url', 'logout_url', 'sign_up_url']
+    TAGS.each do |name|
       define_method(name) { mounted_rack_app.config_or_default(name) }
+    end
+    FORMS = ['login', 'logout', 'signup']
+    FORMS.each do |name|
+      define_method("#{name}_form") do
+        @helper.send("do_#{name}",
+                     '/locomotive/plugins/identity_plugin/', controller)
+      end
     end
 
     before_rack_app_request :set_config
@@ -56,23 +63,6 @@ module IdentityPlugin
     def flash 
       render_flash_messages
     end
-
-
-    #############
-    # form drops
-    #############
-    def login_form
-       @helper.do_login('/locomotive/plugins/identity_plugin/', controller)
-    end
-
-    def logout_form
-      @helper.do_logout('/locomotive/plugins/identity_plugin/', controller)
-    end
-
-    def sign_up_form
-      @helper.do_signup('/locomotive/plugins/identity_plugin/', controller)
-    end
-
 
     private
     def current_user
