@@ -3,6 +3,7 @@ require 'bundler/setup'
 require 'locomotive_plugins'
 require 'identity_plugin/rails_engine'
 require 'identity_plugin/identity_drop'
+require 'identity_plugin/identity_tags'
 
 module IdentityPlugin
   class PluginHelper
@@ -10,21 +11,6 @@ module IdentityPlugin
 
   class IdentityPlugin
     include Locomotive::Plugin
-
-    ########
-    # setup
-    ########
-    TAGS = ['login_url', 'logout_url', 'sign_up_url']
-    TAGS.each do |name|
-      define_method(name) { mounted_rack_app.config_or_default(name) }
-    end
-    FORMS = ['login', 'logout', 'signup']
-    FORMS.each do |name|
-      define_method("#{name}_form") do
-        @helper.send("do_#{name}",
-                     '/locomotive/plugins/identity_plugin/', controller)
-      end
-    end
 
     before_rack_app_request :set_config
 
@@ -40,9 +26,24 @@ module IdentityPlugin
       @drop ||= IdentityDrop.new(self)
     end
 
-    def initialize
-      @helper = PluginHelper.new
-      @helper.instance_eval { extend IdentityEngine::IdentityHelper }
+    def self.liquid_tags
+      {
+        login:  LoginTag,
+        logout: LogoutTag,
+        signup: SignupTag
+      }
+    end
+    
+    def helper
+      if !@helper
+        @helper = PluginHelper.new
+        @helper.instance_eval { extend IdentityEngine::IdentityHelper }
+      end
+      return @helper
+    end
+
+    def path
+      '/locomotive/plugins/identity_plugin/'
     end
 
     ##############
@@ -66,7 +67,7 @@ module IdentityPlugin
 
     private
     def current_user
-      @helper.current_user(controller)
+      helper.current_user(controller)
     end
 
     def render_flash_messages
