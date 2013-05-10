@@ -17,9 +17,11 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'locomotive_plugins',    '1.0.0.beta10'
   s.add_dependency 'cells'
+  s.add_dependency 'omniauth'
+  s.add_dependency 'omniauth-identity'
 
   s.required_rubygems_version = ">= 1.3.6"
 
-  s.files           = Dir['Gemfile', '{lib}/**/*']
+  s.files           = Dir['Gemfile', '{lib}/**/*', 'identity-engine/**/*']
   s.require_paths   = ["lib"]
 end

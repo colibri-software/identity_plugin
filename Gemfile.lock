@@ -1,9 +1,11 @@
 PATH
   remote: .
   specs:
-    identity_plugin (0.0.1)
+    identity_plugin (0.0.5)
       cells
       locomotive_plugins (= 1.0.0.beta10)
+      omniauth
+      omniauth-identity
 
 PATH
   remote: identity-engine

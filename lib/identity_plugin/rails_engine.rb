@@ -1,4 +1,2 @@
 
-$:.push 'identity-engine/lib'
-
-require 'identity-engine'
+require_relative '../../identity-engine/lib/identity-engine'

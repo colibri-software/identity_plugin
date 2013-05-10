@@ -43,7 +43,7 @@ module IdentityPlugin
     end
 
     def path
-      '/locomotive/plugins/identity_plugin/'
+      rack_app_full_path('/')
     end
 
     ##############
