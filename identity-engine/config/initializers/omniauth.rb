@@ -4,3 +4,7 @@ IdentityEngine::Engine.config.middleware.use OmniAuth::Builder do
     IdentityEngine::IdentitiesController.action(:new).call(env)
   }
 end
+
+OmniAuth.config.on_failure = Proc.new { |env|
+  OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+}

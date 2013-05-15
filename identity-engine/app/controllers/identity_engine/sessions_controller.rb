@@ -13,7 +13,8 @@ module IdentityEngine
     end
 
     def failure
-      redirect_to :back, :error => error_msg
+      redirect_to Engine.config_or_default('login_url'),
+        flash: {error: 'Invalid user or password.'}
     end
 
     private
