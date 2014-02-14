@@ -1,4 +1,4 @@
 
-module IdentityPlugin 
-  VERSION = '0.0.6'
+module IdentityPlugin
+  VERSION = '0.2.0'
 end
