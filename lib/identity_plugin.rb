@@ -1,12 +1,16 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'locomotive_plugins'
-require 'identity_plugin/rails_engine'
+require 'omniauth'
+require 'omniauth-identity'
+require 'identity_plugin/engine'
 require 'identity_plugin/identity_drop'
 require 'identity_plugin/identity_tags'
+require 'identity_plugin/identity_helper'
 
 module IdentityPlugin
   class PluginHelper
+     include IdentityHelper
   end
 
   class IdentityPlugin
@@ -15,7 +19,7 @@ module IdentityPlugin
     before_rack_app_request :set_config
 
     def self.rack_app
-      IdentityEngine::Engine
+      Engine
     end
 
     def config_template_file
@@ -33,12 +37,9 @@ module IdentityPlugin
         signup: SignupTag
       }
     end
-    
+
     def helper
-      if !@helper
-        @helper = PluginHelper.new
-        @helper.instance_eval { extend IdentityEngine::IdentityHelper }
-      end
+      @helper ||= PluginHelper.new
       return @helper
     end
 
@@ -61,7 +62,7 @@ module IdentityPlugin
       current_user != nil
     end
 
-    def flash 
+    def flash
       render_flash_messages
     end
 
@@ -79,7 +80,7 @@ module IdentityPlugin
     end
 
     def set_config
-      mounted_rack_app.config_hash = config
+      Engine.config_hash = config
     end
   end
 end
