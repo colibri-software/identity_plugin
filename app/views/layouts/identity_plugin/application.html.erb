@@ -4,11 +4,20 @@
     <title>IdentityPlugin</title>
     <%= stylesheet_link_tag    "identity_plugin/application", :media => "all" %>
     <%= javascript_include_tag "identity_plugin/application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <%= yield %>
-
+    <div class="row">
+      <div class="columns large-12">
+        <% if signed_in? %>
+          <%= yield %>
+        <%else%>
+          <h1>Not Logged Into Hummingbird</h1>
+        <%end%>
+      </div>
+    </div>
   </body>
 </html>
 
