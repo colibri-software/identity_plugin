@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'cells'
   s.add_dependency 'omniauth'
   s.add_dependency 'omniauth-identity'
+  s.add_dependency 'foundation-rails'
 
   s.required_rubygems_version = ">= 1.3.6"
 

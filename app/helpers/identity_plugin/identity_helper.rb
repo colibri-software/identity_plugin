@@ -33,7 +33,7 @@ module IdentityPlugin
 
     def current_user(controller)
       if controller.session[:user_id]
-        @current_user ||= User.find(controller.session[:user_id])
+        @current_user ||= begin; User.find(controller.session[:user_id]); rescue; nil; end
       end
     end
   end

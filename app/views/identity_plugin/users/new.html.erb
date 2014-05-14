@@ -1,0 +1,3 @@
+<h1> Create User</h1>
+<%=render_cell 'identity_plugin/identities', :new, stem: IdentityPlugin::Engine.full_path("/"), identity: session[:id_reg] %>
+<a href="<%=IdentityPlugin::Engine.full_path("/users")%>">Index</a>
