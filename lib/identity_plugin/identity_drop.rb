@@ -1,7 +1,7 @@
 
 module IdentityPlugin
   class IdentityDrop < ::Liquid::Drop
-    delegate :user, :is_signed_in, :user_id, :flash,
+    delegate :user, :is_signed_in, :user_id, :flash, :email,
       to: :source
 
     def initialize(source)

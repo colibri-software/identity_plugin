@@ -54,6 +54,10 @@ module IdentityPlugin
       current_user ? current_user.name : 'Guest'
     end
 
+    def email
+      current_user ? Identity.find(current_user.uid).email : 'guest'
+    end
+
     def user_id
       current_user ? current_user.id.to_s : nil
     end
