@@ -6,7 +6,6 @@ require 'omniauth-identity'
 require 'identity_plugin/engine'
 require 'identity_plugin/identity_drop'
 require 'identity_plugin/identity_tags'
-require 'identity_plugin/identity_helper'
 
 module IdentityPlugin
   class PluginHelper
