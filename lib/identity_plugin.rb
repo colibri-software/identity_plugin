@@ -3,6 +3,7 @@ require 'bundler/setup'
 require 'locomotive_plugins'
 require 'omniauth'
 require 'omniauth-identity'
+require 'rolify'
 require 'foundation-rails'
 require 'identity_plugin/engine'
 require 'identity_plugin/identity_drop'
@@ -10,13 +11,14 @@ require 'identity_plugin/identity_tags'
 
 module IdentityPlugin
   class PluginHelper
-     include IdentityHelper
+    include IdentityHelper
   end
 
   class IdentityPlugin
     include Locomotive::Plugin
 
     before_rack_app_request :set_config
+    before_rack_app_request :ensure_roles
 
     def self.rack_app
       Engine
@@ -85,6 +87,15 @@ module IdentityPlugin
 
     def set_config
       Engine.config_hash = config
+    end
+
+    def ensure_roles
+      roles = Engine.config_or_default("groups").split(/,[  ]*/)
+      if roles
+        roles.each do |role|
+          Role.find_or_create_by(name: role)
+        end
+      end
     end
   end
 end

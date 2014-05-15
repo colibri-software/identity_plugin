@@ -1,6 +1,7 @@
 module IdentityPlugin
   class User
     include Mongoid::Document
+    rolify(role_cname: "IdentityPlugin::Role")
 
     field :provider, :type => String
     field :uid, :type => String

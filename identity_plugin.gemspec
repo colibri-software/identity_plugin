@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'locomotive_plugins',    '1.0.1'
   s.add_dependency 'cells'
+  s.add_dependency 'rolify'
   s.add_dependency 'omniauth'
   s.add_dependency 'omniauth-identity'
   s.add_dependency 'foundation-rails'

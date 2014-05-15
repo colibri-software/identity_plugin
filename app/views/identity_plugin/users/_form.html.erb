@@ -15,6 +15,13 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+  <div class="field">
+    <%= f.label :roles %><br />
+    <%= f.select :role_ids,
+      options_for_select(IdentityPlugin::Role.order_by(name: :asc).collect{|r| [r.name, r.id]}, @user.role_ids.first),
+      {}, {}
+    %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
