@@ -31,6 +31,24 @@ module IdentityPlugin
       current_user != nil
     end
 
+    def method_missing(method)
+      puts "Called method missing with #{method}"
+      if method.to_s =~ /^has_role_(.+)$/
+        return false unless current_user
+        current_user.has_role?($1.to_sym)
+      else
+        super
+      end
+    end
+
+    def self.public_method_defined?(meth)
+      if meth.to_s =~ /^has_role_.*$/
+        true
+      else
+        super
+      end
+    end
+
     protected
 
     attr_reader :source
