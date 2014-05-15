@@ -52,20 +52,9 @@ module IdentityPlugin
     ##############
     # basic drops
     ##############
-    def user
-      current_user ? current_user.name : 'Guest'
-    end
 
-    def email
-      current_user ? Identity.find(current_user.uid).email : 'guest'
-    end
-
-    def user_id
-      current_user ? current_user.id.to_s : nil
-    end
-
-    def is_signed_in
-      current_user != nil
+    def current_user
+      helper.current_user(controller)
     end
 
     def flash
@@ -73,9 +62,6 @@ module IdentityPlugin
     end
 
     private
-    def current_user
-      helper.current_user(controller)
-    end
 
     def render_flash_messages
       ret = ''

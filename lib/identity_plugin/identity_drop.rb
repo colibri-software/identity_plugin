@@ -1,7 +1,7 @@
 
 module IdentityPlugin
   class IdentityDrop < ::Liquid::Drop
-    delegate :user, :is_signed_in, :user_id, :flash, :email,
+    delegate :current_user, :flash,
       to: :source
 
     def initialize(source)
@@ -12,6 +12,23 @@ module IdentityPlugin
           source.mounted_rack_app.config_or_default(name)
         end
       end
+    end
+
+    def user
+      current_user ? current_user.name : 'Guest'
+    end
+
+    def email
+      current_user ? Identity.find(current_user.uid).email : 'guest'
+    end
+
+    def user_id
+      current_user ? current_user.id.to_s : nil
+    end
+
+    def is_signed_in
+      puts "Calling method is_signed_in"
+      current_user != nil
     end
 
     protected
