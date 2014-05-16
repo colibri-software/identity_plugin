@@ -24,6 +24,6 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = ">= 1.3.6"
 
-  s.files           = Dir['Gemfile', '{lib}/**/*']
+  s.files           = Dir['Gemfile', '{app,config,lib}/**/*'] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.require_paths   = ["lib"]
 end
