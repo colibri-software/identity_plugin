@@ -8,8 +8,7 @@ module IdentityPlugin
                         :uid => auth["uid"]).first || User.create_with_omniauth(auth)
       session[:user_id] = user.id
       session[:id_reg] = nil
-      session[:identity_return_to] ||= main_app.root_path
-      redirect_to session[:identity_return_to], :notice => sign_in_msg
+      redirect_to Engine.config_or_default('after_login_url'), :notice => sign_in_msg
     end
 
     def failure
