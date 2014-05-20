@@ -20,7 +20,7 @@ module IdentityPlugin
       return '/'           if key == 'after_login_url'
       return '/logout'     if key == 'logout_url'
       return '/signup'     if key == 'sign_up_url'
-      return ""            if key == 'groups'
+      return ""            if key == 'roles'
       if key == 'error_msg'
         return 'Authentication failed, please try again!'
       end

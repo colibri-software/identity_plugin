@@ -76,7 +76,7 @@ module IdentityPlugin
     end
 
     def ensure_roles
-      roles = Engine.config_or_default("groups").split(/,[  ]*/)
+      roles = Engine.config_or_default("roles").split(/,[  ]*/)
       if roles
         roles.each do |role|
           Role.find_or_create_by(name: role)
