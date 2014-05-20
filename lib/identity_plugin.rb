@@ -19,6 +19,8 @@ module IdentityPlugin
 
     before_rack_app_request :set_config
     before_rack_app_request :ensure_roles
+    before_page_render :set_config
+    before_page_render :check_path_restrictions
 
     def self.rack_app
       Engine
@@ -81,6 +83,30 @@ module IdentityPlugin
         roles.each do |role|
           Role.find_or_create_by(name: role)
         end
+      end
+    end
+
+    def check_path_restrictions
+      unless current_user
+        regexp = Regexp.new(Engine.config_or_default('signed_in_regexp'))
+        if self.controller.request.path =~ regexp
+          self.controller.flash[:error] = "You are not signed in."
+          return self.controller.redirect_to Engine.config_or_default('restricted_page')
+        end
+      end
+      path_match = false
+      Engine.config_or_default('role_config').split(';').each do |group|
+        name, regexp = group.strip.split(':')
+        if self.controller.request.path =~ Regexp.new(regexp.strip)
+          path_match = true
+          if current_user && current_user.has_role?(name.strip.to_sym)
+            return
+          end
+        end
+      end
+      if path_match
+        self.controller.flash[:error] = "You do not have the correct role."
+        return self.controller.redirect_to Engine.config_or_default('restricted_page')
       end
     end
   end

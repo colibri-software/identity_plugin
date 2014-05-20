@@ -30,9 +30,24 @@
   <p class="inline-hints">The message displayed to user upon encountering an error.</p>
 </li>
 <li>
+  <label name="signed_in_regexp">Path Regexp restricted to users:</label>
+  <input type="text" name="signed_in_regexp" />
+  <p class="inline-hints">Enter a regexp that matches all paths that should be restriced to signed in users.</p>
+</li>
+<li>
   <label name="roles">Avaiable Roles:</label>
   <input type="text" name="roles" />
   <p class="inline-hints">List of comma seperated roles.</p>
+</li>
+<li>
+  <label name="role_confg">Path Regexp config restricted to roles:</label>
+  <input type="text" name="role_config" />
+  <p class="inline-hints">Enter a group of regexps with role names that matches paths that should be restriced to those roles. Ex. user: ^/restricted.*$; admin: /admin;</p>
+</li>
+<li>
+  <label name="restricted_page">Path to the restricted Page:</label>
+  <input type="text" name="restricted_page" />
+  <p class="inline-hints">Page to redirect to if access is restricted.</p>
 </li>
 <li>
   <p>To access the users management page click here</p>
