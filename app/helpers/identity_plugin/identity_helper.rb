@@ -4,6 +4,7 @@ module IdentityPlugin
       controller.session[:id_reg] = nil
       if current_user(controller)
         controller.flash[:info] = 'Already signed in!'
+        "<p>#{controller.flash[:info]}</p>"
       else
         controller.session[:identity_return_to] = controller.request.referer
         controller.render_cell 'identity_plugin/sessions', :new, stem: path
@@ -25,6 +26,7 @@ module IdentityPlugin
     def do_signup(path, controller)
       if current_user(controller)
         controller.flash[:info] = 'Already signed in!'
+        "<p>#{controller.flash[:info]}</p>"
       else
         controller.render_cell 'identity_plugin/identities', :new,
           stem: path, identity: controller.session[:id_reg]
