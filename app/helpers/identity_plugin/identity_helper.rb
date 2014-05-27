@@ -20,7 +20,7 @@ module IdentityPlugin
       else
         controller.flash[:info] = 'Already logged out!'
       end
-      controller.redirect_to :back
+      controller.redirect_to Engine.config_or_default('after_logout_url')
     end
 
     def do_signup(path, controller)

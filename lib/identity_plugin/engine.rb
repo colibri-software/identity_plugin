@@ -19,6 +19,7 @@ module IdentityPlugin
       return '/login'      if key == 'login_url'
       return '/'           if key == 'after_login_url'
       return '/logout'     if key == 'logout_url'
+      return '/'           if key == 'after_logout_url'
       return '/signup'     if key == 'sign_up_url'
       return 'a^'          if key == 'signed_in_regexp'
       return ""            if key == 'roles'
