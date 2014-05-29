@@ -18,8 +18,8 @@
   <div class="field">
     <%= f.label :roles %><br />
     <%= f.select :role_ids,
-      options_for_select(IdentityPlugin::Role.order_by(name: :asc).collect{|r| [r.name, r.id] }, @user.role_ids.first),
-      {:include_blank => 'None'}, {}
+      options_for_select(IdentityPlugin::Role.order_by(name: :asc).collect{|r| [r.name, r.id] }, @user.role_ids),
+      {}, {multiple: true, size: IdentityPlugin::Role.count, style: "height: #{2*IdentityPlugin::Role.count}em"}
     %>
   </div>
   <div class="actions">

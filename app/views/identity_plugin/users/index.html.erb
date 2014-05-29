@@ -14,7 +14,7 @@
   <tr>
     <td><%= user.name %></td>
     <td><%= IdentityPlugin::Identity.find(user.uid).email %></td>
-    <td><%= user.roles.first.name if user.roles.first %></td>
+    <td><%= user.roles.collect(&:name).join(', ') %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
