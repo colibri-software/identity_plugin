@@ -1,18 +1,14 @@
 <%= form_tag @form_path, :id => "login-form", :class => "identity-form" do %>
   <div class="row">
-    <div class="columns large-24">
+    <div class="columns large-<%= @options[:email_width]%>">
       <%= label_tag :auth_key, "Email" %>
       <%= text_field_tag :auth_key %>
     </div>
-  </div>
-  <div class="row">
-    <div class="columns large-24">
+    <div class="columns large-<%= @options[:password_width]%>">
       <%= label_tag :password %>
       <%= password_field_tag :password %>
     </div>
-  </div>
-  <div class="row">
-    <div class="columns large-24">
+    <div class="columns large-<%= @options[:submit_width]%>">
       <%= submit_tag "Login" %>
     </div>
   </div>

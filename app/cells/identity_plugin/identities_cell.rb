@@ -3,6 +3,7 @@ module IdentityPlugin
     def new(args)
       @identity  = args[:identity]
       @form_path = args[:stem] + 'auth/identity/register'
+      @options = args[:options]
       render
     end
   end

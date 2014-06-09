@@ -10,31 +10,23 @@
     </div>
   <% end %>
   <div class="row">
-    <div class="columns large-24">
+    <div class="columns large-<%= @options[:name_width]%>">
       <%= label_tag :name %><br>
       <%= text_field_tag :name, @identity.try(:name) %>
     </div>
-  </div>
-  <div class="row">
-    <div class="columns large-24">
+    <div class="columns large-<%= @options[:email_width]%>">
       <%= label_tag :email %><br>
       <%= text_field_tag :email, @identity.try(:email) %>
     </div>
-  </div>
-  <div class="row">
-    <div class="columns large-24">
+    <div class="columns large-<%= @options[:password_width]%>">
       <%= label_tag :password %><br>
       <%= password_field_tag :password %>
     </div>
-  </div>
-  <div class="row">
-    <div class="columns large-24">
+    <div class="columns large-<%= @options[:password_confirm_width]%>">
       <%= label_tag :password_confirmation %><br>
       <%= password_field_tag :password_confirmation %>
     </div>
-  </div>
-  <div class="row">
-    <div class="columns large-24">
+    <div class="columns large-<%= @options[:submit_width]%>">
       <%= submit_tag "Register" %>
     </div>
   </div>

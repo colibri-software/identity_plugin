@@ -1,13 +1,13 @@
 module IdentityPlugin
   module IdentityHelper
-    def do_login(path, controller)
+    def do_login(path, controller, options)
       controller.session[:id_reg] = nil
       if current_user(controller)
         controller.flash[:info] = 'Already signed in!'
         "<p>#{controller.flash[:info]}</p>"
       else
         controller.session[:identity_return_to] = controller.request.referer
-        controller.render_cell 'identity_plugin/sessions', :new, stem: path
+        controller.render_cell 'identity_plugin/sessions', :new, stem: path, options: options
       end
     end
 
@@ -23,13 +23,13 @@ module IdentityPlugin
       controller.redirect_to Engine.config_or_default('after_logout_url')
     end
 
-    def do_signup(path, controller)
+    def do_signup(path, controller, options)
       if current_user(controller)
         controller.flash[:info] = 'Already signed in!'
         "<p>#{controller.flash[:info]}</p>"
       else
         controller.render_cell 'identity_plugin/identities', :new,
-          stem: path, identity: controller.session[:id_reg]
+          stem: path, identity: controller.session[:id_reg], options: options
       end
     end
 
