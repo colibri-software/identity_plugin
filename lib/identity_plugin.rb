@@ -8,6 +8,7 @@ require 'foundation-rails'
 require 'identity_plugin/engine'
 require 'identity_plugin/identity_drop'
 require 'identity_plugin/identity_tags'
+require 'identity_plugin/identity_filters'
 
 module IdentityPlugin
   class PluginHelper
@@ -40,6 +41,10 @@ module IdentityPlugin
         logout: LogoutTag,
         signup: SignupTag
       }
+    end
+
+    def self.liquid_filters
+      IdentityFilters
     end
 
     def helper
