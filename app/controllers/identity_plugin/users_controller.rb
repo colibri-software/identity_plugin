@@ -13,6 +13,13 @@ module IdentityPlugin
       end
     end
     def new
+      @options = {
+        name_width: '24',
+        email_width: '24',
+        password_width: '24',
+        password_confirm_width: '24',
+        submit_width: '24'
+      }
       session['identity_return_to'] = users_path
     end
     # GET /users/1
