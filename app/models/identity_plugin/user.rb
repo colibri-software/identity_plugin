@@ -7,6 +7,11 @@ module IdentityPlugin
     field :uid, :type => String
     field :name, :type => String
 
+    def identity
+      Identity.find(uid)
+    end
+
+    delegate :email, to: :identity
 
     def self.create_with_omniauth(auth)
       create! do |user|
