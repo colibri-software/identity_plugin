@@ -26,6 +26,10 @@ module IdentityPlugin
       current_user ? current_user.id.to_s : nil
     end
 
+    def flash
+      @context.registers[:controller].flash.to_hash.stringify_keys
+    end
+
     def is_signed_in
       puts "Calling method is_signed_in"
       current_user != nil
