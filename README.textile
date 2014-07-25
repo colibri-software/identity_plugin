@@ -14,11 +14,9 @@ To use this plugin you must be using a version of LocomotiveCMS that has the plu
 @gem 'locomotive_cms', require: 'locomotive/engine', git: 'https://github.com/colibri-software/locomotive_engine.git', branch: 'plugins'@
 
 Then add the following lines in your Gemfile to include the plugin:
-<code>
-group :locomotive_plugins do
-  gem 'identity_plugin', git: 'https://github.com/colibri-software/identity_plugin'
-end
-</code>
+<pre><code>group :locomotive_plugins do
+  gem 'identity_plugin', git: https://github.com/colibri-software/identity_plugin.git'
+end</code></pre>
 
 h2. Usage
 
