@@ -14,17 +14,18 @@ Gem::Specification.new do |s|
   s.homepage    = "http://www.colibri-software.com"
   s.summary     = "Locomotive plugin using omniauth-identity for user authentication."
   s.description = "This plugin provides features through omniauth-identity for users to sign up/in and logout."
+  s.licenses    = ["MIT"]
 
-  s.add_dependency 'rails',                 '~> 3.2.16'
+  s.add_dependency 'rails',                 '~> 3.2'
   s.add_dependency 'locomotive_plugins',    '~> 1.0'
-  s.add_dependency 'cells'
-  s.add_dependency 'rolify'
-  s.add_dependency 'omniauth'
-  s.add_dependency 'omniauth-identity'
-  s.add_dependency 'foundation-rails'
+  s.add_dependency 'cells',                 '~> 3.9'
+  s.add_dependency 'rolify',                '~> 3.4'
+  s.add_dependency 'omniauth',              '~> 1.2'
+  s.add_dependency 'omniauth-identity',     '~> 1.1'
+  s.add_dependency 'foundation-rails',      '~> 5.2.2'
 
   s.required_rubygems_version = ">= 1.3.6"
 
-  s.files           = Dir['Gemfile', '{app,config,lib}/**/*'] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files           = Dir['Gemfile', '{app,config,lib}/**/*'] + ["MIT-LICENSE", "Rakefile", "README.textile"]
   s.require_paths   = ["lib"]
 end

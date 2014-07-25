@@ -1,6 +1,6 @@
 module IdentityPlugin
   class Identity
-    include Mongoid::Document
+    include Locomotive::Plugins::Document
     include OmniAuth::Identity::Models::Mongoid
 
     field :email, type: String
