@@ -3,8 +3,9 @@ require_dependency "identity_plugin/application_controller"
 module IdentityPlugin
   class IdentitiesController < ApplicationController
     def new
-      session[:id_reg] = env['omniauth.identity']
-      redirect_to Engine.config_or_default('sign_up_url')
+      @identity = env['omniauth.identity']
+      session[:id_reg] = @identity
+      redirect_to Engine.config_or_default('sign_up_url') unless session[:from_engine]
     end
   end
 end

@@ -6,7 +6,6 @@ module IdentityPlugin
         controller.flash[:info] = 'Already signed in!'
         "<p>#{controller.flash[:info]}</p>"
       else
-        controller.session[:identity_return_to] = controller.request.referer
         controller.render_cell 'identity_plugin/sessions', :new, stem: path, options: options
       end
     end

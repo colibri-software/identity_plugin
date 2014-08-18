@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    identity_plugin (0.6.4)
-      cells (~> 3.9.0)
-      foundation-rails (~> 5.2.2.0)
+    identity_plugin (0.7.0)
+      cells (~> 3.9)
+      foundation-rails (~> 5.2.2)
       locomotive_plugins (~> 1.0)
-      omniauth (~> 1.2.0)
-      omniauth-identity (~> 1.1.0)
-      rails (~> 3.2.16)
-      rolify (~> 3.4.0)
+      omniauth (~> 1.2)
+      omniauth-identity (~> 1.1)
+      rails (~> 3.2)
+      rolify (~> 3.4)
 
 GEM
   remote: https://rubygems.org/

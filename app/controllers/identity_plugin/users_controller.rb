@@ -7,20 +7,11 @@ module IdentityPlugin
     # GET /users.json
     def index
       @users = User.order_by(name: :asc)
+      session[:from_engine] = true
       respond_to do |format|
         format.html # index.html.erb
         format.json { render json: @users }
       end
-    end
-    def new
-      @options = {
-        name_width: '24',
-        email_width: '24',
-        password_width: '24',
-        password_confirm_width: '24',
-        submit_width: '24'
-      }
-      session['identity_return_to'] = users_path
     end
     # GET /users/1
     # GET /users/1.json
@@ -36,7 +27,7 @@ module IdentityPlugin
       @user = User.find(params[:id])
       respond_to do |format|
         if @user.update_attributes(params[:user])
-          format.html { redirect_to edit_user_path(@user), notice: 'User was successfully updated.' }
+          format.html { redirect_to users_path, notice: 'User was successfully updated.' }
           format.json { head :no_content }
         else
           format.html { render action: "edit" }

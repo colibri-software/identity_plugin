@@ -4,11 +4,13 @@ module IdentityPlugin
   class SessionsController < ApplicationController
     def create
       auth = request.env["omniauth.auth"]
-      user = User.where(:provider => auth["provider"],
-                        :uid => auth["uid"]).first || User.create_with_omniauth(auth)
-      session[:user_id] = user.id
-      session[:id_reg] = nil
-      redirect_to Engine.config_or_default('after_login_url'), :notice => sign_in_msg
+      user = User.from_omniauth(auth)
+      if session[:from_engine]
+        redirect_to users_path
+      else
+        session[:user_id] = user.id
+        redirect_to Engine.config_or_default('after_login_url'), :notice => sign_in_msg
+      end
     end
 
     def failure

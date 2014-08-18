@@ -16,11 +16,23 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
     <%= f.label :roles %><br />
     <%= f.select :role_ids,
       options_for_select(IdentityPlugin::Role.order_by(name: :asc).collect{|r| [r.name, r.id] }, @user.role_ids),
       {}, {multiple: true, size: IdentityPlugin::Role.count, style: "height: #{2*IdentityPlugin::Role.count}em"}
     %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
     <%= f.submit %>

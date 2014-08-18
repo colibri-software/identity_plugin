@@ -6,7 +6,7 @@ It provides several features that allow it to be used on its own to restrice acc
 
 h2. Installation
 
-To use this plugin you must be using a version of LocomotiveCMS that has the plugins feature designed by "Colibri Software":https://www.colibri-software.com. You can do this by making the followign changes to the Gemfile in you app:
+To use this plugin you must be using a version of LocomotiveCMS that has the plugins feature designed by "Colibri Software":https://www.colibri-software.com. You can do this by making the following changes to the Gemfile in you app:
 
 * Remove or comment out the following line:
 @gem 'locomotive_cms', '~> 2.X.X', require: 'locomotive/engine'@
