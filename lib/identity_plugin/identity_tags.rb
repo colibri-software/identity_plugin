@@ -22,7 +22,7 @@ module IdentityPlugin
     include IdentityPlugin::IdentityHelper
     def render(context)
       @plugin_obj = context.registers[:plugin_object]
-      do_logout(@plugin_obj.path, @plugin_obj.controller)
+      do_logout(@plugin_obj.controller)
     end
   end
 

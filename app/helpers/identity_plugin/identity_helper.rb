@@ -10,7 +10,7 @@ module IdentityPlugin
       end
     end
 
-    def do_logout(path, controller)
+    def do_logout(controller)
       msg = Engine.config_or_default('sign_out_msg')
       controller.session[:id_reg] = nil
       if controller.session[:user_id]
