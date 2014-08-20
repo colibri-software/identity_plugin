@@ -54,6 +54,24 @@
   <p class="inline-hints">Page to redirect to if access is restricted.</p>
 </li>
 <li>
+  <label name="profile_model">Profile Model:</label>
+  <select name="profile_model">
+    {{#each content_types}}
+    <option value="{{ this.slug }}">{{ this.name }}</option>
+    {{/each}}
+  </select>
+  <p class="inline-hints">Slug of the model representing a user profile.</p>
+</li>
+<li>
+  <label name="uid_field">Slug of the UID field</label>
+  <input type="text" name="uid_field" />
+  <p class="inline-hints">Default: uid</p>
+</li>
+<li>
+  <label name="after_profile_update">After Profile Update URL:</label>
+  <input type="text" name="after_profile_update" />
+</li>
+<li>
   <p>To access the users management page click here</p>
   <p><a href="/locomotive/plugins/identity_plugin/users">User Management</a></p>
 </li>

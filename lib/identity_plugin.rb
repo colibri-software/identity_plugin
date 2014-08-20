@@ -39,7 +39,8 @@ module IdentityPlugin
       {
         login:  LoginTag,
         logout: LogoutTag,
-        signup: SignupTag
+        signup: SignupTag,
+        profile_form: ProfileForm,
       }
     end
 
@@ -54,6 +55,10 @@ module IdentityPlugin
 
     def path
       rack_app_full_path('/')
+    end
+
+    def self.profile_model
+      Thread.current[:site].content_types.where(slug: Engine.config_or_default('profile_model')).first
     end
 
     ##############

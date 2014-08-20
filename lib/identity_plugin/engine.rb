@@ -25,6 +25,9 @@ module IdentityPlugin
       return ""            if key == 'roles'
       return ""            if key == 'role_config'
       return '/'           if key == 'restricted_page'
+      return nil           if key == 'profile_model'
+      return "uid"         if key == 'uid_field'
+      return '/'           if key == 'after_profile_update'
       if key == 'error_msg'
         return 'Authentication failed, please try again!'
       end

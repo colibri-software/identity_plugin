@@ -13,6 +13,14 @@ module IdentityPlugin
       @identity ||= Identity.find(uid)
     end
 
+    def profile
+      @profile ||= find_or_create_profile(uid)
+    end
+
+    def to_liquid
+      UserDrop.new(self)
+    end
+
     delegate :email, to: :identity
 
     before_validation :update_email, :update_name, :update_password
@@ -33,6 +41,14 @@ module IdentityPlugin
         u.identity.reload
         u.save!
       end
+    end
+
+    def update_profile(hash)
+      self.name = hash.delete('name')
+      @email = hash.delete('email')
+      @password = hash.delete('password')
+      @password_confirmation = hash.delete('password_confirmation')
+      profile.update_attributes(hash)
     end
 
     private
@@ -61,5 +77,19 @@ module IdentityPlugin
     def save_identity
       identity.save
     end
+
+    def find_or_create_profile(uid)
+      IdentityPlugin.profile_model.entries.find_or_create_by(Engine.config_or_default('uid_field').to_sym => uid)
+    end
+  end
+
+  class UserDrop < ::Liquid::Drop
+    def initialize(user)
+      @source = user
+    end
+    def profile
+      @source.profile
+    end
+    delegate :name, :email, :uid, :id, :provider, to: :@source
   end
 end

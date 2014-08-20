@@ -1,0 +1,26 @@
+<div id="profile-form-wrapper">
+  <form accept-charset="UTF-8" action="<%= @plugin.rack_app_full_path("/profile/#{@user.id}")%>" class="edit_user" method="post">
+    <div class="row">
+      <div class="columns large-24">
+        <label for="user_name">Name</label><br>
+        <input id="user_name" name="user[name]" size="30" type="text" value="<%= @user.name %>">
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns large-24">
+        <label for="user_email">Email</label><br>
+        <input id="user_email" name="user[email]" size="30" type="text" value="<%= @user.email %>">
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns large-24">
+        <label for="user_password">Password</label><br>
+        <input id="user_password" name="user[password]" size="30" type="password">
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns large-24">
+        <label for="user_password_confirmation">Password confirmation</label><br>
+        <input id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password">
+      </div>
+    </div>
