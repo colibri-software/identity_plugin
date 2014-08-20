@@ -1,36 +1,11 @@
 module IdentityPlugin
   class Engine < ::Rails::Engine
     isolate_namespace IdentityPlugin
-
-    def self.config_hash=(hash)
-      @config_hash = hash
+    def self.plugin_config=(hash)
+      @config_hash = ConfigObject.new(hash)
     end
-
-    def self.config_hash
-      @config_hash ||= {}
-    end
-
-    def self.config_or_default(key)
-      msg = config_hash[key]
-      return msg if msg && !msg.empty?
-
-      return 'Signed in!'  if key == 'sign_in_msg'
-      return 'Signed out!' if key == 'sign_out_msg'
-      return '/login'      if key == 'login_url'
-      return '/'           if key == 'after_login_url'
-      return '/logout'     if key == 'logout_url'
-      return '/'           if key == 'after_logout_url'
-      return '/signup'     if key == 'sign_up_url'
-      return 'a^'          if key == 'signed_in_regexp'
-      return ""            if key == 'roles'
-      return ""            if key == 'role_config'
-      return '/'           if key == 'restricted_page'
-      return nil           if key == 'profile_model'
-      return "uid"         if key == 'uid_field'
-      return '/'           if key == 'after_profile_update'
-      if key == 'error_msg'
-        return 'Authentication failed, please try again!'
-      end
+    def self.plugin_config
+      @config_hash ||= ConfigObject.new
     end
     initializer :assets, group: :all do |config|
       Rails.application.config.assets.precompile += %w(
@@ -38,6 +13,29 @@ module IdentityPlugin
         identity_plugin/application.css
         vendor/modernizr.js
       )
+    end
+  end
+  class ConfigObject < Hash
+    def initialize(hash = {})
+      defaults = {
+        sign_in_msg:          'Signed in!',
+        sign_out_msg:         'Signed out!',
+        login_url:            '/login',
+        after_login_url:      '/',
+        logout_url:           '/logout',
+        after_logout_url:     '/',
+        sign_up_url:          '/signup',
+        signed_in_regexp:     'a^',
+        roles:                "",
+        role_config:          "",
+        restricted_page:      '/',
+        profile_model:        nil,
+        uid_field:            "uid",
+        after_profile_update: '/',
+      }
+      merge!(defaults)
+      hash.select! {|k,v| v && (v.class != String || !v.empty?)}
+      merge!(hash.inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo})
     end
   end
 end

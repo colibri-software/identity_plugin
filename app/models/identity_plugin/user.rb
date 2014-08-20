@@ -81,7 +81,7 @@ module IdentityPlugin
     end
 
     def find_or_create_profile(uid)
-      IdentityPlugin.profile_model.entries.find_or_create_by(Engine.config_or_default('uid_field').to_sym => uid)
+      IdentityPlugin.profile_model.entries.find_or_create_by(Engine.plugin_config[:uid_field].to_sym => uid)
     end
   end
 

@@ -5,7 +5,7 @@ module IdentityPlugin
     def new
       @identity = env['omniauth.identity']
       session[:id_reg] = @identity
-      redirect_to Engine.config_or_default('sign_up_url') unless session[:from_engine]
+      redirect_to Engine.plugin_config[:sign_up_url] unless session[:from_engine]
     end
   end
 end

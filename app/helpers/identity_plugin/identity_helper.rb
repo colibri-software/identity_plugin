@@ -11,7 +11,7 @@ module IdentityPlugin
     end
 
     def do_logout(controller)
-      msg = Engine.config_or_default('sign_out_msg')
+      msg = Engine.plugin_config[:sign_out_msg]
       controller.session[:id_reg] = nil
       if controller.session[:user_id]
         controller.session[:user_id] = nil
@@ -19,7 +19,7 @@ module IdentityPlugin
       else
         controller.flash[:info] = 'Already logged out!'
       end
-      controller.redirect_to Engine.config_or_default('after_logout_url')
+      controller.redirect_to Engine.plugin_config[:after_logout_url]
     end
 
     def do_signup(path, controller, options)

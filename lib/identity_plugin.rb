@@ -58,7 +58,7 @@ module IdentityPlugin
     end
 
     def self.profile_model
-      Thread.current[:site].content_types.where(slug: Engine.config_or_default('profile_model')).first
+      Thread.current[:site].content_types.where(slug: Engine.plugin_config[:profile_model]).first
     end
 
     ##############
@@ -84,11 +84,11 @@ module IdentityPlugin
     end
 
     def set_config
-      Engine.config_hash = config
+      Engine.plugin_config = config
     end
 
     def ensure_roles
-      roles = Engine.config_or_default("roles").split(/,[  ]*/)
+      roles = Engine.plugin_config[:roles].split(/,[  ]*/)
       if roles
         Role.each do |role|
           role.destroy unless roles.include?(role.name)
@@ -101,14 +101,14 @@ module IdentityPlugin
 
     def check_path_restrictions
       unless current_user
-        regexp = Regexp.new(Engine.config_or_default('signed_in_regexp'))
+        regexp = Regexp.new(Engine.plugin_config[:signed_in_regexp])
         if self.controller.request.path =~ regexp
           self.controller.flash[:error] = "You are not signed in."
-          return self.controller.redirect_to Engine.config_or_default('restricted_page')
+          return self.controller.redirect_to Engine.plugin_config[:restricted_page]
         end
       end
       path_match = false
-      Engine.config_or_default('role_config').split(';').each do |group|
+      Engine.plugin_config[:role_config].split(';').each do |group|
         name, regexp = group.strip.split(':')
         if self.controller.request.path =~ Regexp.new(regexp.strip)
           path_match = true
@@ -119,7 +119,7 @@ module IdentityPlugin
       end
       if path_match
         self.controller.flash[:error] = "You do not have the correct role."
-        return self.controller.redirect_to Engine.config_or_default('restricted_page')
+        return self.controller.redirect_to Engine.plugin_config[:restricted_page]
       end
     end
   end

@@ -5,10 +5,10 @@ module IdentityPlugin
 
     def initialize(source)
       @source = source
-      urls = ['login_url', 'logout_url', 'sign_up_url']
+      urls = [:login_url, :logout_url, :sign_up_url]
       urls.each do |name|
         self.class.send(:define_method, name) do
-          source.mounted_rack_app.config_or_default(name)
+          source.mounted_rack_app.plugin_config[name]
         end
       end
     end
