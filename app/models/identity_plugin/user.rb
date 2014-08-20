@@ -26,6 +26,7 @@ module IdentityPlugin
     before_validation :update_email, :update_name, :update_password
     validate :valid_identity
     after_save :save_identity
+    after_destroy :cleanup
 
     def self.from_omniauth(auth)
       where(auth.slice("provider", "uid")).first || create_with_omniauth(auth)
@@ -72,6 +73,11 @@ module IdentityPlugin
 
     def save_identity
       identity.save
+    end
+
+    def cleanup
+      profile.destroy if profile
+      identity.destroy if identity
     end
 
     def find_or_create_profile(uid)
