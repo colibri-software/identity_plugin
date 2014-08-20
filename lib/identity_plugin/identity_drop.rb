@@ -1,8 +1,7 @@
 
 module IdentityPlugin
   class IdentityDrop < ::Liquid::Drop
-    delegate :current_user,
-      to: :source
+    delegate :current_user, to: :source
 
     def initialize(source)
       @source = source
@@ -19,7 +18,7 @@ module IdentityPlugin
     end
 
     def email
-      current_user ? Identity.find(current_user.uid).email : 'guest'
+      current_user ? current_user.email : 'guest'
     end
 
     def user_id
@@ -31,12 +30,10 @@ module IdentityPlugin
     end
 
     def is_signed_in
-      puts "Calling method is_signed_in"
       current_user != nil
     end
 
     def method_missing(method)
-      puts "Called method missing with #{method}"
       if method.to_s =~ /^has_role_(.+)$/
         return false unless current_user
         current_user.has_role?($1.to_sym)
