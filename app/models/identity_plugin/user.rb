@@ -37,10 +37,6 @@ module IdentityPlugin
         uid: auth["uid"],
         name: auth["info"]["name"]
       )
-      unless u.valid?
-        u.identity.reload
-        u.save!
-      end
     end
 
     def update_profile(hash)
