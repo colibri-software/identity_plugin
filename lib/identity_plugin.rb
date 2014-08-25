@@ -75,19 +75,7 @@ module IdentityPlugin
       helper.current_user(controller)
     end
 
-    def flash
-      render_flash_messages
-    end
-
     private
-
-    def render_flash_messages
-      ret = ''
-      [:alert, :error, :info, :notice, :success, :warning].each do |type|
-        ret << "<p class='flash_#{type}'>#{@controller.flash[type]}</p>" if @controller.flash[type]
-      end
-      ret
-    end
 
     def set_config
       Engine.plugin_config = config
