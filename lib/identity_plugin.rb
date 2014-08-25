@@ -44,6 +44,12 @@ module IdentityPlugin
       }
     end
 
+    def self.javascript_context
+      {
+        users: Locomotive::Plugins::Variable.new { ::IdentityPlugin::User.all }
+      }
+    end
+
     def self.liquid_filters
       IdentityFilters
     end
