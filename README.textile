@@ -86,3 +86,11 @@ The plugin also provides one liquid filter to help with determing roles you can 
 This will print true or false depending on whether the current user has the admin role. This will alos allow you to use roles with spaces if you wish:
 
 @{{ "admin user" | identity_plugin_has_role }}@
+
+h3. JS3
+
+The plugin provides the following variables tot he JS3 context:
+
+* identity_plugin_users - mongoid criteria of all users.
+
+The plugin provides no methods for JS3.
