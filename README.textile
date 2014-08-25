@@ -89,7 +89,7 @@ This will print true or false depending on whether the current user has the admi
 
 h3. JS3
 
-The plugin provides the following variables tot he JS3 context:
+The plugin provides the following variables to the JS3 context:
 
 * identity_plugin_users - mongoid criteria of all users.
 
