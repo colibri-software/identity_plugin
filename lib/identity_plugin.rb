@@ -46,7 +46,8 @@ module IdentityPlugin
 
     def self.javascript_context
       {
-        users: Locomotive::Plugins::Variable.new { ::IdentityPlugin::User.all }
+        users: Locomotive::Plugins::Variable.new { ::IdentityPlugin::User.all },
+        roles: Locomotive::Plugins::Variable.new { ::IdentityPlugin::Role.all }
       }
     end
 
