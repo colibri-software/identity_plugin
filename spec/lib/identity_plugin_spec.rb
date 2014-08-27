@@ -47,18 +47,14 @@ module IdentityPlugin
       Config.expects(:hash=).with nil
       plugin = IdentityPlugin.new()
       plugin.stubs(:check_path_restrictions)
-      plugin.run_callbacks(:page_render) do
-        #fake page render
-      end
+      plugin.run_callbacks(:plugin_setup)
     end
     describe "roles" do
       it "should add any missing roles" do
         plugin = IdentityPlugin.new()
         plugin.expects(:config).returns({ roles: "a, b" })
         expect{
-          plugin.run_callbacks(:rack_app_request) do
-            #fake rake_app_request
-          end
+          plugin.run_callbacks(:plugin_setup)
         }.to change{Role.count}.from(0).to(2)
       end
       it "should remove any extra roles" do
@@ -66,9 +62,7 @@ module IdentityPlugin
         plugin = IdentityPlugin.new()
         plugin.expects(:config).returns({ roles: "a, b" })
         expect{
-          plugin.run_callbacks(:rack_app_request) do
-            #fake rake_app_request
-          end
+          plugin.run_callbacks(:plugin_setup)
         }.to change{Role.count}.from(3).to(2)
       end
       it 'should provide the users to js3 context' do
@@ -82,8 +76,8 @@ module IdentityPlugin
     describe "access restrictions" do
       before :each do
         @user = FactoryGirl.create(:user)
-        @role = FactoryGirl.create(:role)
-        @user.add_role @role.name.to_sym
+        @role = :arole
+        @user.add_role(@role)
         @plugin = IdentityPlugin.new()
         @controller = FakeController.new()
         @request = FakeRequest.new()
@@ -91,9 +85,11 @@ module IdentityPlugin
         @plugin.stubs(:controller).returns(@controller)
       end
       it "should restrict access based on signed_in_regexp" do
-        @plugin.expects(:config).returns({
+        @plugin.config = {
+          roles: @role.to_s,
           signed_in_regexp: "restricted|noaccess"
-        })
+        }
+        @plugin.run_callbacks(:plugin_setup)
         @request.path = "restricted"
         @plugin.expects(:current_user).returns(nil)
         @controller.expects(:redirect_to).with("/")
@@ -105,9 +101,11 @@ module IdentityPlugin
       it "should allow access based on roles" do
         @plugin.stubs(:current_user).returns(@user)
         @request.path = "group_restricted"
-        @plugin.expects(:config).returns({
-          role_config: "#{@role.name}: group_restricted"
-        })
+        @plugin.config = {
+          roles: @role.to_s,
+          role_config: "#{@role.to_s}: group_restricted"
+        }
+        @plugin.run_callbacks(:plugin_setup)
         @plugin.run_callbacks(:page_render) do
           #fake rake_app_request
         end
@@ -116,9 +114,11 @@ module IdentityPlugin
       it "should restrict access based on roles" do
         @plugin.stubs(:current_user).returns(@user)
         @request.path = "group_restricted"
-        @plugin.expects(:config).returns({
+        @plugin.config = {
+          roles: @role.to_s,
           role_config: "other_role: group_restricted"
-        })
+        }
+        @plugin.run_callbacks(:plugin_setup)
         @controller.expects(:redirect_to).with("/")
         @plugin.run_callbacks(:page_render) do
           #fake rake_app_request
@@ -128,9 +128,11 @@ module IdentityPlugin
       it "should restrict access unless one rule matches path and role" do
         @plugin.stubs(:current_user).returns(@user)
         @request.path = "group_restricted"
-        @plugin.expects(:config).returns({
-          role_config: "#{@role.name}: group_restricted; other_role: group_restricted"
-        })
+        @plugin.config = {
+          roles: "#{@role.to_s}, other_role",
+          role_config: "#{@role.to_s}: group_restricted; other_role: group_restricted"
+        }
+        @plugin.run_callbacks(:plugin_setup)
         @plugin.run_callbacks(:page_render) do
           #fake rake_app_request
         end

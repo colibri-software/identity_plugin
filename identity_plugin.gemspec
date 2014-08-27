@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.licenses    = ["MIT"]
 
   s.add_dependency 'rails',                 '~> 3.2'
-  s.add_dependency 'locomotive_plugins',    '~> 1.0'
+  s.add_dependency 'locomotive_plugins',    '~> 1.1'
   s.add_dependency 'cells',                 '~> 3.9'
   s.add_dependency 'rolify',                '~> 3.4'
   s.add_dependency 'omniauth',              '~> 1.2'

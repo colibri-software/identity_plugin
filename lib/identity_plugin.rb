@@ -20,7 +20,7 @@ module IdentityPlugin
     include Locomotive::Plugin
 
     after_plugin_setup :set_config
-    before_rack_app_request :ensure_roles
+    after_plugin_setup :ensure_roles
     before_page_render :check_path_restrictions
 
     def self.rack_app

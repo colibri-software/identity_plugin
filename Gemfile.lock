@@ -1,10 +1,10 @@
 PATH
   remote: .
   specs:
-    identity_plugin (0.7.0)
+    identity_plugin (0.8.0)
       cells (~> 3.9)
       foundation-rails (~> 5.2.2)
-      locomotive_plugins (~> 1.0)
+      locomotive_plugins (~> 1.1)
       omniauth (~> 1.2)
       omniauth-identity (~> 1.1)
       rails (~> 3.2)
@@ -215,7 +215,7 @@ GEM
     locomotive-tinymce-rails (3.5.8.2)
       actionpack (~> 3.2)
     locomotive_liquid (2.4.2)
-    locomotive_plugins (1.1.0)
+    locomotive_plugins (1.1.1)
       bson_ext
       haml (~> 4.0)
       locomotive_liquid (~> 2.4)
