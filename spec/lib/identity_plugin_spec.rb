@@ -44,7 +44,7 @@ module IdentityPlugin
       IdentityPlugin.profile_model
     end
     it "should set the plugin config" do
-      Engine.expects(:plugin_config=).with nil
+      Config.expects(:hash=).with nil
       plugin = IdentityPlugin.new()
       plugin.stubs(:check_path_restrictions)
       plugin.run_callbacks(:page_render) do

@@ -9,22 +9,22 @@ module IdentityPlugin
         redirect_to users_path
       else
         session[:user_id] = user.id
-        redirect_to Engine.plugin_config[:after_login_url], :notice => sign_in_msg
+        redirect_to Config.hash[:after_login_url], :notice => sign_in_msg
       end
     end
 
     def failure
-      redirect_to Engine.plugin_config[:login_url],
+      redirect_to Config.hash[:login_url],
         flash: {error: 'Invalid user or password.'}
     end
 
     private
     def sign_in_msg
-      Engine.plugin_config[:sign_in_msg]
+      Config.hash[:sign_in_msg]
     end
 
     def error_msg
-      Engine.plugin_config[:error_msg]
+      Config.hash[:error_msg]
     end
   end
 end

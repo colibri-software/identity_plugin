@@ -8,7 +8,7 @@ require_dependency "identity_plugin/application_controller"
        if @user.save
          flash[:notice] = "Profile Updated"
        end
-       redirect_to Engine.plugin_config[:after_profile_update]
+       redirect_to Config.hash[:after_profile_update]
      end
    end
  end

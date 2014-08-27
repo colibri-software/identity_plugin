@@ -6,6 +6,7 @@ require 'omniauth-identity'
 require 'rolify'
 require 'foundation-rails'
 require 'identity_plugin/engine'
+require 'identity_plugin/config'
 require 'identity_plugin/identity_drop'
 require 'identity_plugin/identity_tags'
 require 'identity_plugin/identity_filters'
@@ -18,9 +19,8 @@ module IdentityPlugin
   class IdentityPlugin
     include Locomotive::Plugin
 
-    before_rack_app_request :set_config
+    after_plugin_setup :set_config
     before_rack_app_request :ensure_roles
-    before_page_render :set_config
     before_page_render :check_path_restrictions
 
     def self.rack_app
@@ -64,7 +64,7 @@ module IdentityPlugin
     end
 
     def self.profile_model
-      Thread.current[:site].content_types.where(slug: Engine.plugin_config[:profile_model]).first
+      Thread.current[:site].content_types.where(slug: Config.hash[:profile_model]).first
     end
 
     ##############
@@ -78,11 +78,11 @@ module IdentityPlugin
     private
 
     def set_config
-      Engine.plugin_config = config
+      Config.hash = config
     end
 
     def ensure_roles
-      roles = Engine.plugin_config[:roles].split(/,[  ]*/)
+      roles = Config.hash[:roles].split(/,[  ]*/)
       if roles
         Role.each do |role|
           role.destroy unless roles.include?(role.name)
@@ -95,14 +95,14 @@ module IdentityPlugin
 
     def check_path_restrictions
       unless current_user
-        regexp = Regexp.new(Engine.plugin_config[:signed_in_regexp])
+        regexp = Regexp.new(Config.hash[:signed_in_regexp])
         if self.controller.request.path =~ regexp
           self.controller.flash[:error] = "You are not signed in."
-          return self.controller.redirect_to Engine.plugin_config[:restricted_page]
+          return self.controller.redirect_to Config.hash[:restricted_page]
         end
       end
       path_match = false
-      Engine.plugin_config[:role_config].split(';').each do |group|
+      Config.hash[:role_config].split(';').each do |group|
         name, regexp = group.strip.split(':')
         if self.controller.request.path =~ Regexp.new(regexp.strip)
           path_match = true
@@ -113,7 +113,7 @@ module IdentityPlugin
       end
       if path_match
         self.controller.flash[:error] = "You do not have the correct role."
-        return self.controller.redirect_to Engine.plugin_config[:restricted_page]
+        return self.controller.redirect_to Config.hash[:restricted_page]
       end
     end
   end
