@@ -14,7 +14,9 @@ module IdentityPlugin
     end
 
     def profile
-      @profile ||= find_or_create_profile(uid)
+      if Config.hash[:profile_model_enabled]
+        @profile ||= find_or_create_profile
+      end
     end
 
     def to_liquid
@@ -41,11 +43,14 @@ module IdentityPlugin
     end
 
     def update_profile(hash)
+      profile
       self.name = hash.delete('name')
       @email = hash.delete('email')
       @password = hash.delete('password')
       @password_confirmation = hash.delete('password_confirmation')
-      profile.update_attributes(hash)
+      hash[Config.hash[:name_field].to_sym] = self.name
+      hash[Config.hash[:email_field].to_sym] = @email
+      profile.update_attributes(hash) if profile
     end
 
     private
@@ -80,8 +85,12 @@ module IdentityPlugin
       identity.destroy if identity
     end
 
-    def find_or_create_profile(uid)
-      IdentityPlugin.profile_model.entries.find_or_create_by(Config.hash[:uid_field].to_sym => uid)
+    def find_or_create_profile
+      IdentityPlugin.profile_model.entries.find_or_create_by({
+        Config.hash[:uid_field].to_sym => self.uid,
+        Config.hash[:email_field].to_sym => self.email,
+        Config.hash[:name_field].to_sym => self.name,
+      })
     end
   end
 

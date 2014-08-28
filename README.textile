@@ -37,7 +37,10 @@ This plugin provides many configuration options which are as follows:
 * Path regexp config restricted to roles - List of regexps matched with roles. The users will be redirected from any page matching the regexps unless they have at least one role required to view that page. The list must be of the following format
 @board: /portal; member: /portal/member; standards: /portal/member|/portal/standards-committee; executive: /portal/members|/portal/executive-committee@
 * Path to the Restricted Page - The path that users will be redirected to if they attempt to access a page that they do not have access to
-* Profile Model - model that will be used for a profile. Must have at least one field for the uid.
+* Profile Model Enabled? - whether the profile model should be used.
+* Profile Model - model that will be used for a profile. Must have at least three fields for the name, email, and uid.
+* Slug of the Name field - slug of the field in the Profile model used to store the name.
+* Slug of the Email field - slug of the field in the Profile model used to store the email.
 * Slug of the UID field - slug of the field in the Profile model used to store the uid.
 * After Profile Update URL - url to go to after the profile update is complete.
 

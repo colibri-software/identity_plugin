@@ -39,8 +39,6 @@ module IdentityPlugin
         @user.errors.count.should be > 0
       end
       it "should delete the identity when it is destroyed" do
-        IdentityPlugin.expects(:profile_model).returns(FakeProfile)
-        FakeProfile.expects(:entries).returns(FakeProfile)
         @user.destroy
         Identity.where(email: @identity.email).count.should eq 0
       end
@@ -48,9 +46,14 @@ module IdentityPlugin
     describe 'existing user with profile' do
       before :each do
         @user = FactoryGirl.create(:user)
-        @profile = FactoryGirl.create(:profile, uid: @user.uid)
-        IdentityPlugin.expects(:profile_model).returns(FakeProfile)
-        FakeProfile.expects(:entries).returns(FakeProfile)
+        @profile = FactoryGirl.create(:profile, uid: @user.uid, email: @user.email, name: @user.name, )
+        IdentityPlugin.stubs(:profile_model).returns(FakeProfile)
+        FakeProfile.stubs(:entries).returns(FakeProfile)
+        Config.hash[:profile_model_enabled] = true
+      end
+      it "should not have a profile is they are disabled" do
+        Config.hash[:profile_model_enabled] = false
+        @user.profile.should be nil
       end
       it 'should have a profile' do
         @user.profile.should eq @profile
@@ -61,13 +64,11 @@ module IdentityPlugin
           'email' => "new.email@example.com",
           'password' => "new password",
           'password_confirmation' => "new password",
-          'field_1' => "Field 1 Content",
-          'field_2' => "Field 2 Content"
         }
         @user.update_profile(hash)
         @profile.reload
-        @profile.field_1.should eq "Field 1 Content"
-        @profile.field_2.should eq "Field 2 Content"
+        @profile.name.should eq "New name"
+        @profile.email.should eq "new.email@example.com"
       end
       it "should delete the profile when it is destroyed" do
         uid = @user.uid
@@ -108,7 +109,7 @@ module IdentityPlugin
         IdentityPlugin.expects(:profile_model).returns(FakeProfile)
         FakeProfile.expects(:entries).returns(FakeProfile)
         user = FactoryGirl.create(:user)
-        profile = FactoryGirl.create(:profile, uid: user.uid)
+        profile = FactoryGirl.create(:profile, uid: user.uid, email: user.email, name: user.name)
         user.to_liquid.profile.should eq profile
       end
     end

@@ -54,6 +54,10 @@
   <p class="inline-hints">Page to redirect to if access is restricted.</p>
 </li>
 <li>
+  <label name="profile_model_enabled">Use Profile Model?:</label>
+  <input type="checkbox" name="profile_model_enabled" />
+</li>
+<li>
   <label name="profile_model">Profile Model:</label>
   <select name="profile_model">
     {{#each content_types}}
@@ -61,6 +65,16 @@
     {{/each}}
   </select>
   <p class="inline-hints">Slug of the model representing a user profile.</p>
+</li>
+<li>
+  <label name="email_field">Slug of the Email field</label>
+  <input type="text" name="email_field" />
+  <p class="inline-hints">Default: email</p>
+</li>
+<li>
+  <label name="name_field">Slug of the Name field</label>
+  <input type="text" name="name_field" />
+  <p class="inline-hints">Default: name</p>
 </li>
 <li>
   <label name="uid_field">Slug of the UID field</label>

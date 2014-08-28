@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    identity_plugin (0.8.0)
+    identity_plugin (0.8.1)
       cells (~> 3.9)
       foundation-rails (~> 5.2.2)
       locomotive_plugins (~> 1.1)

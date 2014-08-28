@@ -69,7 +69,7 @@ module IdentityPlugin
       @plugin = context.registers[:plugin_object]
       @user = context[@user_signature]
       form_start = ERB.new(File.read(File.join(File.dirname(__FILE__), 'form_start.erb'))).result binding
-      fields = render_all(@nodelist, context)
+      fields = @user.profile ? render_all(@nodelist, context) : ""
       form_end = ERB.new(File.read(File.join(File.dirname(__FILE__), 'form_end.erb'))).result binding
       return form_start + fields + form_end
     end
