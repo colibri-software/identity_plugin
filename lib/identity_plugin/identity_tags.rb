@@ -46,10 +46,18 @@ module IdentityPlugin
   end
 
   class ProfileForm < Liquid::Block
+
     Syntax = /for\s*(#{::Liquid::VariableSignature}+)/
+
     def initialize(tag_name, markup, tokens, context)
       if markup =~ Syntax
-        @options = {}
+        @options = {
+          name_width: '24',
+          email_width: '24',
+          password_width: '24',
+          password_confirm_width: '24',
+          submit_width: '24'
+        }
         @user_signature = $1
         markup.scan(::Liquid::TagAttributes) { |key, value| @options[key.to_sym] = value.gsub(/"|'/, '') }
       else
@@ -65,5 +73,5 @@ module IdentityPlugin
       form_end = ERB.new(File.read(File.join(File.dirname(__FILE__), 'form_end.erb'))).result binding
       return form_start + fields + form_end
     end
+    end
   end
-end
