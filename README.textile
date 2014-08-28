@@ -35,11 +35,11 @@ This plugin provides many configuration options which are as follows:
 * Path Regexp restricted to users: - A regular expression that will match path the requires the users to be signed in
 * Avaiable Roles - Comma seperated list of roles that users can be assigned
 * Path regexp config restricted to roles - List of regexps matched with roles. The users will be redirected from any page matching the regexps unless they have at least one role required to view that page. The list must be of the following format
-@>board: /portal; member: /portal/member; standards: /portal/member|/portal/standards-committee; executive: /portal/members|/portal/executive-committee@
+@board: /portal; member: /portal/member; standards: /portal/member|/portal/standards-committee; executive: /portal/members|/portal/executive-committee@
 * Path to the Restricted Page - The path that users will be redirected to if they attempt to access a page that they do not have access to
 * Profile Model - model that will be used for a profile. Must have at least one field for the uid.
-* Slug of the UID fiele - slug of the field in the Profile model used to store the uid.
-* After Profile Updaet URL - url to go to after the profile update is complete.
+* Slug of the UID field - slug of the field in the Profile model used to store the uid.
+* After Profile Update URL - url to go to after the profile update is complete.
 
 The plugin config also has a link at the bottom that will allow CMS users to manage the website users.
 
@@ -84,7 +84,7 @@ Here is an example of the login tag:
 Here is an example of the profile form tag:
 <pre><code>{% identity_plugin_profile_form for current_user name_width: '10', email_width: '10', password_width: '10', password_confirm_width: '10', submit_width: '3' %}
   <insert profile model input fields>
-{% endidentity_plugin_profile_form%}</code></pre>
+{% endidentity_plugin_profile_form %}</code></pre>
 
 h3. Liquid Filters
 
@@ -92,7 +92,7 @@ The plugin also provides one liquid filter to help with determing roles you can 
 
 @{{ "admin" | identity_plugin_has_role }}@
 
-This will print true or false depending on whether the current user has the admin role. This will alos allow you to use roles with spaces if you wish:
+This will print true or false depending on whether the current user has the admin role. This will also allow you to use roles with spaces if you wish:
 
 @{{ "admin user" | identity_plugin_has_role }}@
 
@@ -101,5 +101,6 @@ h3. JS3
 The plugin provides the following variables to the JS3 context:
 
 * identity_plugin_users - mongoid criteria of all users.
+* identity_plugin_roles - mongoid criteria of all roles.
 
 The plugin provides no methods for JS3.
