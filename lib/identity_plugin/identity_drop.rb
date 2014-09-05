@@ -8,7 +8,7 @@ module IdentityPlugin
       urls = [:login_url, :logout_url, :sign_up_url]
       urls.each do |name|
         self.class.send(:define_method, name) do
-          source.mounted_rack_app.plugin_config[name]
+          Config.hash[name]
         end
       end
     end
