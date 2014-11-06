@@ -14,7 +14,7 @@ group :test do
   gem "debugger"
 end
 
-gem "locomotive_cms", path: '../../locomotive_engine', require: 'locomotive/engine'
+gem "locomotive_cms", path: 'locomotive_engine', require: 'locomotive/engine'
 
 group :assets do
   gem 'compass-rails',  '~> 1.1.7'
