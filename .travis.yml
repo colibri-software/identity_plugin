@@ -3,6 +3,7 @@ install:
   - git clone https://github.com/colibri-software/locomotive_engine.git
   - cd locomotive_engine
   - git checkout plugins
+  - bundle install
   - cd ..
 
 rvm:
