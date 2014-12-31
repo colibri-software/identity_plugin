@@ -1,12 +1,12 @@
 h1. Identity Plugin
 
-This is a plugin for LocomotiveCMS. It was created to allow LocomotiveCMS designers to create Sign In/Sign Up accouns on their website.
+This is a plugin for LocomotiveCMS. It was created to allow LocomotiveCMS designers to create Sign In/Sign Up accounts on their website.
 
-It provides several features that allow it to be used on its own to restrice access to webiste locations. It can also be used with other plugins to provide one login for the website.
+It provides several features that allow it to be used on its own to restrict access to website locations. It can also be used with other plugins to provide one login for the website.
 
 h2. Installation
 
-To use this plugin you must be using a version of LocomotiveCMS that has the plugins feature designed by "Colibri Software":https://www.colibri-software.com. You can do this by making the following changes to the Gemfile in you app:
+To use this plugin you must be using a version of LocomotiveCMS that has the plugins feature designed by "Colibri Software":https://www.colibri-software.com. You can do this by making the following changes to the Gemfile in your app:
 
 * Remove or comment out the following line:
 @gem 'locomotive_cms', '~> 2.X.X', require: 'locomotive/engine'@
@@ -15,7 +15,7 @@ To use this plugin you must be using a version of LocomotiveCMS that has the plu
 
 Then add the following lines in your Gemfile to include the plugin:
 <pre><code>group :locomotive_plugins do
-  gem 'identity_plugin', git: https://github.com/colibri-software/identity_plugin.git'
+  gem 'identity_plugin', git: 'https://github.com/colibri-software/identity_plugin.git'
 end</code></pre>
 
 h2. Usage
