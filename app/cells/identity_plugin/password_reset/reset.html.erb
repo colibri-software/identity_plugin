@@ -1,0 +1,11 @@
+<%= form_tag identity_plugin.password_reset_path(params[:password_reset_token]), method: :put do %>
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="field">
+    <%= label_tag :password_confirmation %>
+    <%= password_field_tag :password_confirmation %>
+  </div>
+  <div class="actions"><%= submit_tag 'Update Password' %></div>
+<% end %>

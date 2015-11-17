@@ -1,6 +1,7 @@
 IdentityPlugin::Engine.routes.draw do
   resources :users
   resources :identities
+  resources :password_resets
 
   match "/profile/:id" => "profile#update", :via => :post
 

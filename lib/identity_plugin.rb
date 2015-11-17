@@ -10,6 +10,7 @@ require 'identity_plugin/config'
 require 'identity_plugin/identity_drop'
 require 'identity_plugin/identity_tags'
 require 'identity_plugin/identity_filters'
+require 'identity_plugin/reset_password_tag'
 
 module IdentityPlugin
   class PluginHelper
@@ -41,6 +42,7 @@ module IdentityPlugin
         logout: LogoutTag,
         signup: SignupTag,
         profile_form: ProfileForm,
+        reset_password: ResetPassword,
       }
     end
 
