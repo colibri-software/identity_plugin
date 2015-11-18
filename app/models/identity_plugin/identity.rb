@@ -14,12 +14,12 @@ module IdentityPlugin
     validates_uniqueness_of :email
     validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
 
-    def send_password_reset
+    def send_password_reset(base_url)
       generate_token(:password_reset_token)
       self.password_reset_sent_at = Time.zone.now
       save!
-      # TODO
-      # IdentityMailer.password_reset(self).deliver
+      url = password_reset_url(base_url)
+      IdentityMailer.password_reset(self, url).deliver
     end
 
     protected
@@ -28,6 +28,18 @@ module IdentityPlugin
       begin
         self[column] = SecureRandom.urlsafe_base64
       end while Identity.where(column => self[column]).any?
+    end
+
+    def password_reset_url(base_url)
+      uri = URI(base_url)
+      if uri.query
+        q = CGI::parse(uri.query)
+      else
+        q = {}
+      end
+      q[:password_reset_token] = self.password_reset_token
+      uri.query = URI.encode_www_form(q)
+      uri.to_s
     end
   end
 end

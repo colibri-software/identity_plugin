@@ -5,7 +5,7 @@ module IdentityPlugin
 
     def create
       identity = Identity.where(email: params[:email]).first
-      identity.send_password_reset if identity
+      identity.send_password_reset(request.referer) if identity
 
       flash[:notice] = 'Password reset instructions were sent to the email address provided'
       redirect_to Rails.application.routes.url_helpers.root_url(only_path: true)

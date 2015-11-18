@@ -27,6 +27,7 @@ module IdentityPlugin
         name_field:            "name",
         uid_field:             "uid",
         after_profile_update:  '/',
+        mail_sender:          'noreply@colibri-software.com',
       }
       merge!(defaults)
       hash.select! {|k,v| v && (v.class != String || !v.empty?)}
